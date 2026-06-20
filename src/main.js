@@ -58,7 +58,7 @@ function initNav() {
 
   panel?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      panel.classList.remove('open');
+      panel?.classList.remove('open');
       toggle?.setAttribute('aria-expanded', 'false');
     });
   });
@@ -94,35 +94,10 @@ function initTabs() {
   document.getElementById('tab-hosts')?.addEventListener('click', () => switchTab('hosts'));
 }
 
-function initBenefitsCarousel() {
-  const carousel = document.getElementById('benefits-carousel');
-  const dots = document.querySelectorAll('.carousel-dot');
-  if (!carousel || !dots.length) return;
-
-  const slides = carousel.querySelectorAll('.benefit-slide');
-
-  function updateDots() {
-    const scrollLeft = carousel.scrollLeft;
-    const width = carousel.clientWidth;
-    const index = Math.round(scrollLeft / (slides[0]?.offsetWidth + 16 || width));
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-  }
-
-  carousel.addEventListener('scroll', updateDots, { passive: true });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      const slide = slides[i];
-      if (slide) {
-        carousel.scrollTo({ left: slide.offsetLeft - 20, behavior: 'smooth' });
-      }
-    });
-  });
-}
-
 function initLegal() {
   const main = document.getElementById('main-content');
   const footer = document.getElementById('site-footer');
+  const nav = document.getElementById('site-nav');
 
   function showLegal(id) {
     document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
@@ -130,6 +105,7 @@ function initLegal() {
     if (panel) {
       main?.setAttribute('hidden', '');
       footer?.setAttribute('hidden', '');
+      nav?.setAttribute('hidden', '');
       panel.classList.add('visible');
       window.scrollTo({ top: 0 });
       history.pushState(null, '', `#${id}`);
@@ -140,6 +116,7 @@ function initLegal() {
     document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
     main?.removeAttribute('hidden');
     footer?.removeAttribute('hidden');
+    nav?.removeAttribute('hidden');
   }
 
   document.querySelectorAll('[data-legal]').forEach((link) => {
@@ -174,8 +151,6 @@ wireContact();
 initDemoVideo();
 initNav();
 initTabs();
-initBenefitsCarousel();
 initLegal();
 
-// Expose for any inline handlers
 window.switchTab = switchTab;
