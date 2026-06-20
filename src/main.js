@@ -47,6 +47,37 @@ function initDemoVideo() {
   iframe.title = 'Waymate demo video';
 }
 
+function initScrollHeader() {
+  const header = document.getElementById('site-header');
+  const panel = document.getElementById('nav-mobile-panel');
+  const toggle = document.getElementById('nav-toggle');
+  if (!header) return;
+
+  let lastScrollY = window.scrollY;
+  const threshold = 16;
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      const current = window.scrollY;
+      const delta = current - lastScrollY;
+
+      if (current <= threshold) {
+        header.classList.remove('nav-hidden');
+      } else if (delta > 0) {
+        header.classList.add('nav-hidden');
+        panel?.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      } else if (delta < 0) {
+        header.classList.remove('nav-hidden');
+      }
+
+      lastScrollY = current;
+    },
+    { passive: true }
+  );
+}
+
 function initNav() {
   const toggle = document.getElementById('nav-toggle');
   const panel = document.getElementById('nav-mobile-panel');
@@ -97,7 +128,7 @@ function initTabs() {
 function initLegal() {
   const main = document.getElementById('main-content');
   const footer = document.getElementById('site-footer');
-  const nav = document.getElementById('site-nav');
+  const header = document.getElementById('site-header');
 
   function showLegal(id) {
     document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
@@ -105,7 +136,7 @@ function initLegal() {
     if (panel) {
       main?.setAttribute('hidden', '');
       footer?.setAttribute('hidden', '');
-      nav?.setAttribute('hidden', '');
+      header?.setAttribute('hidden', '');
       panel.classList.add('visible');
       window.scrollTo({ top: 0 });
       history.pushState(null, '', `#${id}`);
@@ -116,7 +147,7 @@ function initLegal() {
     document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
     main?.removeAttribute('hidden');
     footer?.removeAttribute('hidden');
-    nav?.removeAttribute('hidden');
+    header?.removeAttribute('hidden');
   }
 
   document.querySelectorAll('[data-legal]').forEach((link) => {
@@ -149,6 +180,7 @@ document.getElementById('year').textContent = String(new Date().getFullYear());
 wireStoreLinks();
 wireContact();
 initDemoVideo();
+initScrollHeader();
 initNav();
 initTabs();
 initLegal();
