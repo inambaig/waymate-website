@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Waymate — Share your daily commute. Save money, reduce traffic. Pakistan's subscription-based route carpooling app."
+    />
+    <meta name="theme-color" content="#f58220" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <title>Waymate — Share Your Daily Commute</title>
+  </head>
+  <body class="bg-background text-on-surface overflow-x-hidden" id="top">
+    <!-- Navigation -->
+    <nav class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-outline-variant/30">
+      <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+        <a href="#top" class="text-headline-md font-extrabold text-primary tracking-tighter">WAYMATE</a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-label-md" href="#features">Features</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-label-md" href="#how-it-works">How It Works</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-label-md" href="#pricing">Pricing</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-label-md" href="#cities">Cities</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-label-md" href="#safety">Safety</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="#download"
+            class="hidden md:inline-flex bg-primary-container text-on-primary font-bold px-6 py-2 rounded-lg shadow-md hover:scale-95 active:opacity-80 transition-all"
+          >
+            Download
+          </a>
+          <button
+            id="nav-toggle"
+            class="md:hidden flex flex-col gap-[5px] p-2"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="block w-6 h-0.5 bg-on-surface rounded"></span>
+            <span class="block w-6 h-0.5 bg-on-surface rounded"></span>
+            <span class="block w-6 h-0.5 bg-on-surface rounded"></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="nav-mobile-panel" class="nav-mobile-panel md:hidden">
+        <div class="flex flex-col gap-4">
+          <a class="text-on-surface-variant font-semibold" href="#features">Features</a>
+          <a class="text-on-surface-variant font-semibold" href="#pricing">Pricing</a>
+          <a class="text-on-surface-variant font-semibold" href="#cities">Cities</a>
+          <a class="bg-primary-container text-on-primary font-bold px-6 py-3 rounded-lg text-center" href="#download">Download</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <header class="relative pt-10 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-72 h-72 bg-primary-fixed/30 rounded-full blur-3xl -z-10 md:block hidden"></div>
+        <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-secondary-container/30 rounded-full blur-3xl -z-10 md:block hidden"></div>
+
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+          <!-- Mobile layout -->
+          <div class="md:hidden text-center">
+            <span class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm mb-5">
+              Now live in Lahore
+            </span>
+            <h1 class="text-headline-lg-mobile font-bold mb-2 text-on-surface leading-tight">
+              Share your daily commute.
+            </h1>
+            <p class="text-headline-lg-mobile font-bold text-primary-container mb-4">Save money.</p>
+            <p class="text-body-md text-on-surface-variant mb-8 max-w-sm mx-auto">
+              Waymate connects verified Drivers and Passengers going to the same workplace. Everyone saves!
+            </p>
+            <div class="flex flex-col gap-3 max-w-xs mx-auto mb-10">
+              <a href="#" class="store-btn justify-center" data-store="apple" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-3xl">apps</span>
+                <span>
+                  <span class="store-btn-label-sm block">Download on the</span>
+                  <span class="store-btn-label-lg">App Store</span>
+                </span>
+              </a>
+              <a href="#" class="store-btn justify-center" data-store="google" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined text-3xl">play_arrow</span>
+                <span>
+                  <span class="store-btn-label-sm block">Get it on</span>
+                  <span class="store-btn-label-lg">Google Play</span>
+                </span>
+              </a>
+            </div>
+
+            <!-- Phone mockup with YouTube demo -->
+            <div class="phone-mockup">
+              <div class="phone-mockup-notch"></div>
+              <div class="phone-mockup-frame">
+                <div class="phone-mockup-screen">
+                  <iframe
+                    id="demo-video-iframe"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop layout -->
+          <div class="hidden md:grid grid-cols-2 gap-gutter items-center">
+            <div class="z-10">
+              <span class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm mb-6">
+                Now live in Lahore
+              </span>
+              <h1 class="text-headline-xl font-extrabold mb-6 text-on-surface leading-tight tracking-tight">
+                Share your daily commute.<br />
+                <span class="text-primary-container">Save money, reduce traffic.</span>
+              </h1>
+              <p class="text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                Waymate connects verified Ride Hosts and Passengers on shared routes across Pakistan. Book a seat, offer a ride, and make every trip count.
+              </p>
+              <div class="flex flex-wrap gap-4 mb-8">
+                <a href="#" class="store-btn" data-store="apple" target="_blank" rel="noopener">
+                  <span class="material-symbols-outlined text-3xl">apps</span>
+                  <span>
+                    <span class="store-btn-label-sm block">Download on the</span>
+                    <span class="store-btn-label-lg">App Store</span>
+                  </span>
+                </a>
+                <a href="#" class="store-btn" data-store="google" target="_blank" rel="noopener">
+                  <span class="material-symbols-outlined text-3xl">play_arrow</span>
+                  <span>
+                    <span class="store-btn-label-sm block">Get it on</span>
+                    <span class="store-btn-label-lg">Google Play</span>
+                  </span>
+                </a>
+              </div>
+              <p class="text-label-sm text-on-surface-variant/60">
+                Sign in with your Pakistan phone number (+92). We'll send a one-time passcode.
+              </p>
+            </div>
+            <div class="relative">
+              <img
+                class="w-full max-w-md mx-auto drop-shadow-2xl"
+                alt="Waymate app on a smartphone showing route map"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy0ZyC1yLtTLa38SqxFJuuKkoBWPqaV1IwZisNabOp_CWj5hoNP_RUeC7NrULQe12YLOWJTnXvRgE3bMAySIpy5PyyG2Z4xTzoNAbuJWRJaolLfm9Ocuw0k1LMLZbTxFRixU8K1Nsz8HaECKce2H1c6kzqB-M8yftFLWas-OhALsUcJC3TLAyyXMNtuvGIyqJ-Vpu2IQnfrnJc1gge9fSDheRfJIRrMw8Iw3eGG0qtXrBNIu-Gqm9KK18Zk56I6xNKwYtPqOB1Aw"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Value Propositions -->
+      <section class="py-12 md:py-20 bg-surface-container-low">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+          <!-- Mobile carousel -->
+          <div class="md:hidden">
+            <div id="benefits-carousel" class="benefits-carousel -mx-margin-mobile px-margin-mobile">
+              <article class="benefit-slide bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/50">
+                <div class="w-14 h-14 bg-secondary-container/60 rounded-full flex items-center justify-center mb-4">
+                  <img src="/assets/icons/benefit-verified.png" alt="" width="40" height="40" class="object-contain" />
+                </div>
+                <h3 class="text-headline-md font-semibold mb-2">Verified Profiles</h3>
+                <p class="text-on-surface-variant text-body-md">
+                  Every profile and driving license is manually verified for your safety and peace of mind.
+                </p>
+              </article>
+              <article class="benefit-slide bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/50">
+                <div class="w-14 h-14 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+                  <img src="/assets/icons/benefit-affordable.png" alt="" width="40" height="40" class="object-contain" />
+                </div>
+                <h3 class="text-headline-md font-semibold mb-2">Affordable Rides</h3>
+                <p class="text-on-surface-variant text-body-md">
+                  Split fuel costs with per-seat pricing. Motorbike fares at a fraction of car rates.
+                </p>
+              </article>
+              <article class="benefit-slide bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/50">
+                <div class="w-14 h-14 bg-tertiary-fixed rounded-full flex items-center justify-center mb-4">
+                  <img src="/assets/icons/benefit-eco.png" alt="" width="40" height="40" class="object-contain" />
+                </div>
+                <h3 class="text-headline-md font-semibold mb-2">Eco-friendly</h3>
+                <p class="text-on-surface-variant text-body-md">
+                  Track your CO₂ savings and fuel avoided with every shared trip you take.
+                </p>
+              </article>
+            </div>
+            <div class="carousel-dots">
+              <button class="carousel-dot active" aria-label="Slide 1"></button>
+              <button class="carousel-dot" aria-label="Slide 2"></button>
+              <button class="carousel-dot" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <!-- Desktop grid -->
+          <div class="hidden md:grid grid-cols-3 gap-gutter">
+            <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border-b-4 border-primary-container">
+              <div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-xl mb-6">
+                <span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+              </div>
+              <h3 class="text-headline-md font-semibold mb-2">Verified Profiles</h3>
+              <p class="text-on-surface-variant">CNIC, selfie, and driving license verification for trusted rides every day.</p>
+            </article>
+            <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border-b-4 border-secondary-container">
+              <div class="w-12 h-12 bg-secondary-container/50 flex items-center justify-center rounded-xl mb-6">
+                <span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+              </div>
+              <h3 class="text-headline-md font-semibold mb-2">Affordable Rides</h3>
+              <p class="text-on-surface-variant">Split fuel costs with per-seat pricing. Motorbike fares at a fraction of car rates.</p>
+            </article>
+            <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border-b-4 border-tertiary-container">
+              <div class="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-xl mb-6">
+                <span class="material-symbols-outlined text-tertiary text-3xl">eco</span>
+              </div>
+              <h3 class="text-headline-md font-semibold mb-2">Eco-friendly</h3>
+              <p class="text-on-surface-variant">Track your CO₂ savings and fuel avoided with every shared trip you take.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Built for Everyone -->
+      <section class="py-16 md:py-32" id="roles">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-10 md:mb-16">
+          <h2 class="text-headline-lg-mobile md:text-headline-xl font-bold md:font-extrabold mb-3 md:mb-4">
+            Built for everyone<span class="md:inline hidden"> on the road</span>
+          </h2>
+          <p class="text-body-md md:text-body-lg text-on-surface-variant">
+            Whether you're driving or riding, Waymate adapts to you.
+          </p>
+        </div>
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter">
+          <article class="role-card-host bg-white rounded-2xl md:rounded-[32px] p-6 md:p-10 border border-outline-variant shadow-sm md:border-t-0">
+            <div class="mb-6 md:mb-8 flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold text-label-sm uppercase tracking-wider">Drivers</span>
+              <span class="material-symbols-outlined text-primary-container text-4xl hidden md:block">directions_car</span>
+            </div>
+            <h3 class="text-headline-md md:text-headline-lg font-bold mb-3 md:mb-4">Offer trips and earn money</h3>
+            <p class="text-on-surface-variant mb-6 md:mb-8 hidden md:block">
+              Register your car or motorbike, set your route and schedule, and earn from confirmed bookings on your daily commute.
+            </p>
+            <ul class="space-y-3 md:space-y-4">
+              <li class="flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                Get paid for your empty seats
+              </li>
+              <li class="flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                Help your community
+              </li>
+              <li class="flex items-center gap-3 text-label-md md:hidden">
+                <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                No extra trips, no fuss
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">circle</span>
+                Garage for cars &amp; motorbikes
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">circle</span>
+                Single &amp; repeating trips
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">circle</span>
+                Per-km pricing in PKR
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-primary-container text-sm">circle</span>
+                Earnings dashboard
+              </li>
+            </ul>
+          </article>
+          <article class="role-card-passenger bg-white rounded-2xl md:rounded-[32px] p-6 md:p-10 border border-outline-variant shadow-sm md:border-t-0">
+            <div class="mb-6 md:mb-8 flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-label-sm uppercase tracking-wider">Passengers</span>
+              <span class="material-symbols-outlined text-secondary text-4xl hidden md:block">person_pin_circle</span>
+            </div>
+            <h3 class="text-headline-md md:text-headline-lg font-bold mb-3 md:mb-4">Find trips and save on travel</h3>
+            <p class="text-on-surface-variant mb-6 md:mb-8 hidden md:block">
+              Search routes with date and time filters, request a seat on verified host trips, and track your ride on trip day.
+            </p>
+            <ul class="space-y-3 md:space-y-4">
+              <li class="flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                Track location with Google Maps
+              </li>
+              <li class="flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                Gender-specific filters
+              </li>
+              <li class="flex items-center gap-3 text-label-md md:hidden">
+                <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                Live trip tracking
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Route search with Google Maps
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Gender-aware seat maps
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                Live trip tracking
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-label-md">
+                <span class="material-symbols-outlined text-secondary text-sm">circle</span>
+                In-app chat with hosts
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- How Waymate Works — desktop only -->
+      <section class="hidden md:block py-32 bg-surface" id="how-it-works">
+        <div class="max-w-max-width mx-auto px-margin-desktop text-center mb-12">
+          <h2 class="text-headline-xl font-extrabold mb-4">How Waymate works</h2>
+          <p class="text-body-lg text-on-surface-variant mb-10">Get started in minutes — no complicated setup required.</p>
+          <div class="inline-flex bg-surface-container-high p-1.5 rounded-2xl mb-16">
+            <button class="px-8 py-3 rounded-xl font-semibold transition-all active-tab" id="tab-passengers">For Passengers</button>
+            <button class="px-8 py-3 rounded-xl font-semibold transition-all text-on-surface-variant" id="tab-hosts">For Ride Hosts</button>
+          </div>
+        </div>
+        <div class="max-w-max-width mx-auto px-margin-desktop">
+          <div class="grid grid-cols-3 gap-gutter" id="content-passengers">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                <span class="material-symbols-outlined text-primary-container text-4xl">search</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Search Route</h4>
+              <p class="text-on-surface-variant">Enter your destination and time. Find hosts traveling your way.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                <span class="material-symbols-outlined text-primary-container text-4xl">event_seat</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Book a Seat</h4>
+              <p class="text-on-surface-variant">Select a preferred seat. Request to join the trip with one tap.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                <span class="material-symbols-outlined text-primary-container text-4xl">hail</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Enjoy the Ride</h4>
+              <p class="text-on-surface-variant">Meet your host, track the live trip, and reach safely.</p>
+            </div>
+          </div>
+          <div class="hidden grid grid-cols-3 gap-gutter" id="content-hosts">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                <span class="material-symbols-outlined text-secondary text-4xl">garage</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Add your vehicle</h4>
+              <p class="text-on-surface-variant">Register your car or bike with photos and capacity info.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                <span class="material-symbols-outlined text-secondary text-4xl">route</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Create a trip</h4>
+              <p class="text-on-surface-variant">Draw your route, set schedule and per-km pricing.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-8 relative border border-outline-variant">
+                <span class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                <span class="material-symbols-outlined text-secondary text-4xl">account_balance_wallet</span>
+              </div>
+              <h4 class="text-headline-md font-semibold mb-4">Earn from bookings</h4>
+              <p class="text-on-surface-variant">Approve passenger requests and get paid for your empty seats.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile: Smarter commute features (dark) -->
+      <section class="md:hidden py-12 px-margin-mobile" id="features">
+        <div class="bg-inverse-surface rounded-3xl p-6 text-inverse-on-surface">
+          <h2 class="text-headline-md font-bold mb-2">Smarter commute features</h2>
+          <p class="text-body-md text-inverse-on-surface/70 mb-6">Designed specifically for the needs of corporate commuters.</p>
+          <div class="dark-feature-grid">
+            <div class="dark-feature-card wide">
+              <span class="material-symbols-outlined text-primary-container mb-2">shield</span>
+              <p class="font-semibold text-sm mb-1">Identity verification</p>
+              <p class="text-xs text-inverse-on-surface/60">Official ID and workplace verification.</p>
+            </div>
+            <div class="dark-feature-card">
+              <span class="material-symbols-outlined text-primary-container mb-2">my_location</span>
+              <p class="font-semibold text-sm">Live Tracking</p>
+            </div>
+            <div class="dark-feature-card">
+              <span class="material-symbols-outlined text-primary-container mb-2">chat</span>
+              <p class="font-semibold text-sm">Real-time chat</p>
+            </div>
+            <div class="dark-feature-card">
+              <span class="material-symbols-outlined text-primary-container mb-2">account_balance_wallet</span>
+              <p class="font-semibold text-sm">In-app wallet</p>
+            </div>
+            <div class="dark-feature-card">
+              <span class="material-symbols-outlined text-primary-container mb-2">pin_drop</span>
+              <p class="font-semibold text-sm">Multi-stop</p>
+            </div>
+            <div class="dark-feature-card wide flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-2xl">eco</span>
+              <div>
+                <p class="font-semibold text-sm">Impact Tracker</p>
+                <p class="text-xs text-inverse-on-surface/60">See your CO₂ savings.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desktop: Bento features -->
+      <section class="hidden md:block py-32" id="features-desktop">
+        <div class="max-w-max-width mx-auto px-margin-desktop text-center mb-20">
+          <h2 class="text-headline-xl font-extrabold mb-4">Everything you need for a smarter commute</h2>
+          <p class="text-body-lg text-on-surface-variant">Powerful features designed for Pakistan's daily travelers.</p>
+        </div>
+        <div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-3xl border border-outline-variant hover:border-primary-container transition-all shadow-sm">
+            <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">id_card</span>
+            <h5 class="text-headline-md font-semibold mb-2">Identity Verification</h5>
+            <p class="text-on-surface-variant text-body-md">CNIC and license checks you can trust.</p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-outline-variant hover:border-primary-container transition-all shadow-sm">
+            <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">my_location</span>
+            <h5 class="text-headline-md font-semibold mb-2">Live Trip Tracking</h5>
+            <p class="text-on-surface-variant text-body-md">Real-time GPS sharing with family.</p>
+          </div>
+          <div class="col-span-2 bg-primary-container text-white p-8 rounded-3xl shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+              <h5 class="text-headline-lg font-bold mb-4">Smart Seat Maps</h5>
+              <p class="text-white/80 text-body-lg">Gender-aware seating with visual selection and fair price negotiation built-in.</p>
+            </div>
+            <div class="absolute -right-10 -bottom-10 opacity-20">
+              <span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1">airline_seat_recline_extra</span>
+            </div>
+          </div>
+          <div class="col-span-2 bg-white p-8 rounded-3xl border border-outline-variant shadow-sm flex gap-6 items-center">
+            <div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-secondary text-3xl">chat</span>
+            </div>
+            <div>
+              <h5 class="text-headline-md font-semibold mb-1">In-App Chat</h5>
+              <p class="text-on-surface-variant text-body-md">Coordinate trips instantly without sharing phone numbers.</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-outline-variant shadow-sm">
+            <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">eco</span>
+            <h5 class="text-headline-md font-semibold mb-2">Impact Tracker</h5>
+            <p class="text-on-surface-variant text-body-md">See your CO₂ savings.</p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-outline-variant shadow-sm">
+            <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">sos</span>
+            <h5 class="text-headline-md font-semibold mb-2">Emergency SOS</h5>
+            <p class="text-on-surface-variant text-body-md">One-tap help support.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact -->
+      <section class="py-12 md:py-32 bg-secondary/5">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-10 md:gap-20">
+          <div class="flex-1 text-center md:text-left">
+            <h2 class="text-headline-lg-mobile md:text-headline-xl font-bold md:font-extrabold mb-4 md:mb-6">
+              Every ride counts for the planet
+            </h2>
+            <p class="text-body-md md:text-body-lg text-on-surface-variant mb-8 md:mb-12 hidden md:block">
+              Waymate's impact tracker shows you the difference you're making — fewer cars on the road, less fuel burned, and cleaner air for Pakistan's cities.
+            </p>
+            <div class="grid grid-cols-2 gap-6 md:gap-12 max-w-sm mx-auto md:max-w-none">
+              <div class="bg-white md:bg-transparent rounded-xl p-4 md:p-0 shadow-sm md:shadow-none">
+                <p class="text-secondary font-bold text-headline-md md:text-headline-xl mb-1">2.4 kg</p>
+                <p class="text-on-surface-variant text-label-md md:text-base">CO₂ saved</p>
+              </div>
+              <div class="bg-white md:bg-transparent rounded-xl p-4 md:p-0 shadow-sm md:shadow-none">
+                <p class="text-secondary font-bold text-headline-md md:text-headline-xl mb-1">1.2 L</p>
+                <p class="text-on-surface-variant text-label-md md:text-base">Fuel saved</p>
+              </div>
+            </div>
+            <p class="text-on-surface-variant text-label-md mt-6 md:hidden">See your impact with every ride</p>
+          </div>
+          <div class="flex-1 relative flex justify-center">
+            <div class="w-48 h-48 md:w-64 md:h-64 bg-secondary-container/30 rounded-full flex items-center justify-center">
+              <svg viewBox="0 0 120 120" width="96" height="96" class="md:w-32 md:h-32" aria-hidden="true">
+                <path d="M60 20 Q75 40 70 60 Q65 85 60 95 Q55 85 50 60 Q45 40 60 20" fill="#006d37" opacity="0.25"/>
+                <path d="M45 50 L55 35 L65 50 L75 40 L70 70 L50 70 Z" fill="#006d37" opacity="0.5"/>
+                <path d="M35 75 Q60 55 85 75" stroke="#7ada95" stroke-width="3" fill="none"/>
+              </svg>
+            </div>
+            <div class="hidden md:block absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg border border-secondary/20">
+              <p class="text-secondary font-bold text-sm">Grow your impact with every ride</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="py-12 md:py-32" id="pricing">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-8 md:mb-16">
+          <h2 class="text-headline-lg-mobile md:text-headline-xl font-bold md:font-extrabold mb-3 md:mb-4">Simple, transparent pricing</h2>
+          <p class="text-body-md md:text-body-lg text-on-surface-variant">
+            <span class="md:hidden">Choose a plan that fits your commute needs.</span>
+            <span class="hidden md:inline">One plan. Unlimited possibilities for your daily commute.</span>
+          </p>
+        </div>
+        <div class="max-w-md mx-auto px-margin-mobile md:px-0">
+          <div class="relative bg-white rounded-3xl md:rounded-[32px] p-8 md:p-10 shadow-xl md:shadow-2xl border border-outline-variant/50 md:border-2 md:border-primary-container/20">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white px-5 py-1 rounded-full font-semibold text-label-sm uppercase tracking-widest">
+              Most Popular
+            </div>
+            <div class="text-center mb-8 md:mb-10 mt-2">
+              <p class="text-headline-md md:text-headline-lg font-bold mb-4">Unlimited Monthly</p>
+              <div class="flex items-baseline justify-center gap-1">
+                <span class="text-on-surface-variant font-bold text-sm">PKR</span>
+                <span class="text-headline-xl font-black text-primary-container">1,000</span>
+                <span class="text-on-surface-variant">/month</span>
+              </div>
+              <p class="text-secondary font-semibold text-label-md mt-2">First month free — start your trial today</p>
+            </div>
+            <ul class="space-y-3 md:space-y-4 mb-8 md:mb-12">
+              <li class="flex items-center gap-3 text-body-md">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                Unlimited ride hosting and booking
+              </li>
+              <li class="flex items-center gap-3 text-body-md">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                Fair usage: 60 rides per month
+              </li>
+              <li class="flex items-center gap-3 text-body-md">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                Full access to all Waymate features
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-body-md">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                Verified badges and live tracking
+              </li>
+              <li class="hidden md:flex items-center gap-3 text-body-md">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                In-app chat and push notifications
+              </li>
+            </ul>
+            <a href="#download" class="block w-full bg-primary-container text-white py-4 rounded-xl font-semibold text-headline-md text-center shadow-lg shadow-primary-container/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              Get Started Free
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities -->
+      <section class="py-12 md:py-32 bg-surface-container-low" id="cities">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-8 md:mb-16">
+          <h2 class="text-headline-lg-mobile md:text-headline-xl font-bold md:font-extrabold mb-3">Available cities</h2>
+          <p class="text-body-md md:text-body-lg text-on-surface-variant hidden md:block">Starting in Lahore and expanding across Pakistan.</p>
+        </div>
+
+        <!-- Mobile list -->
+        <div class="md:hidden max-w-max-width mx-auto px-margin-mobile space-y-3">
+          <div class="bg-white rounded-xl p-4 flex items-center justify-between border border-outline-variant/50">
+            <span class="font-semibold">Lahore</span>
+            <span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase">Live</span>
+          </div>
+          <div class="bg-white/80 rounded-xl p-4 flex items-center justify-between border border-outline-variant/50 opacity-70">
+            <span class="font-semibold">Islamabad</span>
+            <span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase">Coming Soon</span>
+          </div>
+          <div class="bg-white/80 rounded-xl p-4 flex items-center justify-between border border-outline-variant/50 opacity-70">
+            <span class="font-semibold">Karachi</span>
+            <span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase">Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- Desktop grid -->
+        <div class="hidden md:grid max-w-max-width mx-auto px-margin-desktop grid-cols-5 gap-6">
+          <div class="bg-white p-6 rounded-2xl border-2 border-secondary text-center shadow-sm">
+            <span class="inline-block px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase mb-4">Live</span>
+            <h6 class="text-headline-md font-semibold mb-1">Lahore</h6>
+            <p class="text-label-sm text-on-surface-variant">Full service available</p>
+          </div>
+          <div class="bg-white/50 p-6 rounded-2xl border border-outline-variant text-center opacity-60">
+            <span class="inline-block px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase mb-4">Coming Soon</span>
+            <h6 class="text-headline-md font-semibold mb-1">Islamabad</h6>
+            <p class="text-label-sm text-on-surface-variant">Waitlist open</p>
+          </div>
+          <div class="bg-white/50 p-6 rounded-2xl border border-outline-variant text-center opacity-60">
+            <span class="inline-block px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase mb-4">Coming Soon</span>
+            <h6 class="text-headline-md font-semibold mb-1">Karachi</h6>
+            <p class="text-label-sm text-on-surface-variant">Waitlist open</p>
+          </div>
+          <div class="bg-white/50 p-6 rounded-2xl border border-outline-variant text-center opacity-60">
+            <span class="inline-block px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase mb-4">Coming Soon</span>
+            <h6 class="text-headline-md font-semibold mb-1">Faisalabad</h6>
+            <p class="text-label-sm text-on-surface-variant">Waitlist open</p>
+          </div>
+          <div class="bg-white/50 p-6 rounded-2xl border border-outline-variant text-center opacity-60">
+            <span class="inline-block px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase mb-4">Coming Soon</span>
+            <h6 class="text-headline-md font-semibold mb-1">Gujranwala</h6>
+            <p class="text-label-sm text-on-surface-variant">Waitlist open</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Safety — desktop only -->
+      <section class="hidden md:block py-32" id="safety">
+        <div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 class="text-headline-xl font-extrabold mb-6">Safety &amp; trust built in</h2>
+            <p class="text-body-lg text-on-surface-variant mb-10">
+              Waymate connects drivers and passengers but prioritizes your safety at every step.
+            </p>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-primary-container">shield</span>
+                </div>
+                <div>
+                  <p class="font-bold mb-1">Verified identities</p>
+                  <p class="text-on-surface-variant">CNIC, selfie, and driving license verification for all hosts.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-primary-container">verified</span>
+                </div>
+                <div>
+                  <p class="font-bold mb-1">Verified badges</p>
+                  <p class="text-on-surface-variant">Separate badges for verified passengers and verified hosts.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-primary-container">star</span>
+                </div>
+                <div>
+                  <p class="font-bold mb-1">Ratings system</p>
+                  <p class="text-on-surface-variant">Multi-dimensional reviews after every completed trip.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative bg-surface-container-high rounded-[40px] p-12 overflow-hidden">
+            <img
+              class="w-full rounded-2xl shadow-xl"
+              alt="Hand holding phone showing Waymate verified profile"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2uwiUlBXjO9bI0k3tIgnYCoi6dOGFN0oHgt2H96HHfXfC7wq6G3MYaQhrKepDZEPvv9uNfJKqvvD5_bXYCzVq7AHtqyXNBpQd3V4C-UoZmWdxzSg4r2u8pSpfI-OF3N5RpC6ypKEwLJrokJ2_JLBtmhNIPl6sImKXtVAh4fEcWlfGEd4C-3_PWGnFgxaQuIugjZigmlLKY5uxBrtAQKzofGOu4n8c0ap9tg2-cwCKC6QTDLFT677n1PrhiFBxyVsyGMsO4W2BZA"
+            />
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white px-8 py-4 rounded-2xl shadow-xl flex items-center gap-4 whitespace-nowrap">
+              <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-white">check</span>
+              </div>
+              <p class="font-bold text-on-surface">Trusted by 10k+ Commuters</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download CTA -->
+      <section class="py-12 md:py-32 bg-primary-fixed" id="download">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-container text-white rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-6 md:mb-10 shadow-xl">
+            <span class="material-symbols-outlined text-4xl md:text-5xl">directions_car</span>
+          </div>
+          <h2 class="text-headline-lg-mobile md:text-headline-xl font-bold md:font-extrabold mb-4 md:mb-6">Ready to share your commute?</h2>
+          <p class="text-body-md md:text-body-lg text-on-surface-variant mb-8 md:mb-12 max-w-2xl mx-auto">
+            Download Waymate and join Pakistan's carpooling community today.
+          </p>
+          <div class="flex flex-col md:flex-row flex-wrap justify-center gap-3 md:gap-6 max-w-xs md:max-w-none mx-auto">
+            <a href="#" class="store-btn justify-center md:justify-start px-8 py-4 rounded-2xl" data-store="apple" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined text-3xl">apps</span>
+              <span>
+                <span class="store-btn-label-sm block">Download on the</span>
+                <span class="store-btn-label-lg">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="store-btn justify-center md:justify-start px-8 py-4 rounded-2xl" data-store="google" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined text-3xl">play_arrow</span>
+              <span>
+                <span class="store-btn-label-sm block">Get it on</span>
+                <span class="store-btn-label-lg">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-on-surface pt-12 md:pt-20 pb-8" id="site-footer">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12 md:mb-20">
+        <div>
+          <div class="text-headline-lg font-extrabold text-surface mb-4 md:mb-6">WAYMATE</div>
+          <p class="text-surface-container-high/80 text-body-md pr-4">
+            Waymate simplifies daily commuting by connecting commuters and drivers in your city.
+          </p>
+        </div>
+        <div>
+          <h6 class="text-surface font-semibold text-headline-md mb-4 md:mb-6">Product</h6>
+          <ul class="space-y-3 md:space-y-4">
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#features">Features</a></li>
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#how-it-works">How It Works</a></li>
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#pricing">Pricing</a></li>
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#cities">Cities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="text-surface font-semibold text-headline-md mb-4 md:mb-6">Legal</h6>
+          <ul class="space-y-3 md:space-y-4">
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#terms" data-legal="terms">Terms of Service</a></li>
+            <li><a class="text-surface-container-high/80 hover:opacity-100 text-label-sm" href="#privacy" data-legal="privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="text-surface font-semibold text-headline-md mb-4 md:mb-6">Contact</h6>
+          <ul class="space-y-3 md:space-y-4">
+            <li><a class="text-surface-container-high/80 text-label-sm" href="#" id="footer-email">hello@waymate.pk</a></li>
+            <li><a class="text-surface-container-high/80 text-label-sm" href="#" id="footer-phone">+92-300-0000000</a></li>
+            <li class="hidden md:flex gap-4 mt-6">
+              <a class="text-surface hover:text-primary-fixed transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto pt-8 border-t border-surface-container-highest/20">
+        <p class="text-surface-container-high/60 text-label-sm text-center leading-relaxed">
+          © <span id="year"></span> Waymate. All rights reserved. Waymate connects drivers and passengers but does not operate vehicles or guarantee trip availability, timing, or pricing.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Legal panels -->
+    <section class="legal-panel" id="legal-terms">
+      <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop max-w-2xl">
+        <h2>Terms of Service</h2>
+        <p>By using Waymate, you agree to these terms. Waymate is a platform connecting Ride Hosts and Passengers for shared commutes. We do not operate vehicles or employ drivers.</p>
+        <p>Users must complete identity verification to access full features. Hosts must provide valid CNIC, selfie, and driving license documentation.</p>
+        <p>Subscription fees are billed monthly. Fair usage limits apply as described in the app.</p>
+        <a href="#top" class="inline-block mt-6 bg-primary-container text-white px-6 py-3 rounded-lg font-semibold" data-legal-back>Back to top</a>
+      </div>
+    </section>
+
+    <section class="legal-panel" id="legal-privacy">
+      <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop max-w-2xl">
+        <h2>Privacy Policy</h2>
+        <p>Waymate collects information necessary to provide carpooling services, including phone number, profile details, location data for routes and live tracking, and verification documents.</p>
+        <p>Location data is used for route matching, trip tracking, and safety features. We do not sell your personal information to third parties.</p>
+        <p>You may request deletion of your account and associated data by contacting us at the email address listed on this site.</p>
+        <a href="#top" class="inline-block mt-6 bg-primary-container text-white px-6 py-3 rounded-lg font-semibold" data-legal-back>Back to top</a>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
