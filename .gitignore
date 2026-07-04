@@ -1,5 +1,9 @@
 node_modules/
 dist/
+public/articles/**
+public/article-assets/
+.article-assets/
+.article-build/
 .DS_Store
 *.local
 .env

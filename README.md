@@ -16,6 +16,56 @@ npm run build
 npm run preview
 ```
 
+## Articles (SEO Blog)
+
+Articles are stored as Markdown in `content/articles/{category}/{slug}.md` and compiled to static HTML at build time.
+
+```bash
+# Seed initial articles (safe to re-run — skips existing files)
+npm run seed:articles
+
+# Regenerate article HTML manually
+npm run build:articles
+
+# Full build (articles + site)
+npm run build
+```
+
+### Adding a new article
+
+1. Create `content/articles/{category-slug}/my-article.md` with frontmatter:
+
+```markdown
+---
+title: "Your Article Title"
+description: "SEO meta description (150–160 chars)."
+date: 2025-07-01
+updated: 2026-03-01
+readTime: 6
+slug: my-article
+image: /article-images/default-og.jpg
+imageAlt: "Descriptive alt text for the hero image"
+faq:
+  - q: "Common question?"
+    a: "Clear, helpful answer."
+---
+
+Article body in markdown with internal links like [Lahore guide](/articles/city-guides/carpooling-lahore-guide.html)...
+```
+
+2. Run `npm run build` and deploy.
+
+**SEO upgrade scripts:**
+
+```bash
+npm run setup:images      # download hero images to public/article-images/
+npm run upgrade:articles  # apply pillar + tier-2 content upgrades
+```
+
+Generated pages live at `/articles/`, `/articles/{category}/`, and `/articles/{category}/{slug}.html`.
+Sitemap: `/sitemap-articles.xml`
+
+
 ## Environment Variables
 
 | Variable | Description |

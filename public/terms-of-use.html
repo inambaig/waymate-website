@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Waymate Terms of Use — Legal terms governing use of Pakistan's carpool platform, including liability limitations and user responsibilities." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+  <title>Terms of Use — Waymate</title>
+  <style>
+    :root {
+      --color-primary: #ff9100;
+      --color-primary-dark: #e67e00;
+      --color-text: #1a1a1a;
+      --color-text-muted: #4a4a4a;
+      --color-text-light: #6b6b6b;
+      --color-bg: #fafafa;
+      --color-surface: #ffffff;
+      --color-border: #e8e8e8;
+      --color-accent-bg: #fff8f0;
+      --color-highlight: #fff3e0;
+      --color-warning-bg: #fff5f5;
+      --color-warning-border: #ffcdd2;
+      --color-warning-text: #5d1a1a;
+      --font-sans: 'Quicksand', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --max-width: 820px;
+      --sidebar-width: 260px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-header {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    }
+
+    .site-header-inner {
+      max-width: calc(var(--max-width) + var(--sidebar-width) + 4rem);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--color-text); }
+
+    .back-link {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+
+    .back-link:hover { color: var(--color-primary-dark); }
+
+    .page-wrapper {
+      max-width: calc(var(--max-width) + var(--sidebar-width) + 4rem);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem 1.25rem 3rem;
+      }
+    }
+
+    .toc {
+      position: sticky;
+      top: 5.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+    }
+
+    @media (max-width: 960px) {
+      .toc { position: static; max-height: none; }
+    }
+
+    .toc-title {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-light);
+      margin: 0 0 0.75rem 0.5rem;
+    }
+
+    .toc ol { list-style: none; margin: 0; padding: 0; }
+    .toc li { margin-bottom: 0.15rem; }
+
+    .toc a {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+      line-height: 1.4;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .toc a:hover {
+      background: var(--color-accent-bg);
+      color: var(--color-primary-dark);
+    }
+
+    .content {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 2.5rem 2.75rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.03);
+    }
+
+    @media (max-width: 640px) {
+      .content { padding: 1.75rem 1.25rem; }
+    }
+
+    .doc-title {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .doc-subtitle {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      margin: 0 0 1.5rem;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      padding: 1rem 1.25rem;
+      background: var(--color-accent-bg);
+      border-radius: 10px;
+      border-left: 4px solid var(--color-primary);
+      margin-bottom: 2rem;
+    }
+
+    .meta-bar strong { color: var(--color-text); }
+
+    .notice-box {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.6;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-highlight);
+      border: 1px solid #ffe0b2;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      color: #5d4037;
+    }
+
+    .notice-box strong { color: #3e2723; }
+
+    .warning-box {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.65;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-warning-bg);
+      border: 1px solid var(--color-warning-border);
+      border-radius: 10px;
+      margin-bottom: 2.5rem;
+      color: var(--color-warning-text);
+    }
+
+    .warning-box strong { color: #3e0000; }
+
+    section {
+      margin-bottom: 2.75rem;
+      scroll-margin-top: 5.5rem;
+    }
+
+    section:last-of-type { margin-bottom: 0; }
+
+    h2 {
+      font-family: var(--font-sans);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 1.75rem 0 0.75rem;
+    }
+
+    h4 {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      margin: 1.25rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p { margin: 0 0 1rem; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    li > ul, li > ol { margin-top: 0.4rem; margin-bottom: 0.4rem; }
+    strong { font-weight: 600; color: var(--color-text); }
+    a { color: var(--color-primary-dark); }
+    a:hover { text-decoration: none; }
+
+    .definition-list { margin: 1rem 0; padding: 0; list-style: none; }
+    .definition-list li { margin-bottom: 0.75rem; padding-left: 0; }
+    .definition-list dt {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: var(--color-text);
+      display: inline;
+    }
+    .definition-list dd { display: inline; margin: 0; }
+
+    .caps-block {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      padding: 1rem 1.25rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .contact-block {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-block p {
+      margin-bottom: 0.35rem;
+      font-size: 0.9375rem;
+    }
+
+    footer.doc-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="logo">WAY<span>MATE</span></a>
+      <a href="/" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#s1">Introduction</a></li>
+        <li><a href="#s2">Definitions</a></li>
+        <li><a href="#s3">Platform Nature</a></li>
+        <li><a href="#s4">Eligibility &amp; Accounts</a></li>
+        <li><a href="#s5">Identity Verification</a></li>
+        <li><a href="#s6">Host Obligations</a></li>
+        <li><a href="#s7">Passenger Obligations</a></li>
+        <li><a href="#s8">Trip Conduct &amp; Safety</a></li>
+        <li><a href="#s9">Assumption of Risk</a></li>
+        <li><a href="#s10">No Agency Relationship</a></li>
+        <li><a href="#s11">Prohibited Conduct</a></li>
+        <li><a href="#s12">Criminal Misuse</a></li>
+        <li><a href="#s13">Physical Harm &amp; Property Loss</a></li>
+        <li><a href="#s14">Identity Documents</a></li>
+        <li><a href="#s15">Payments &amp; Subscriptions</a></li>
+        <li><a href="#s16">Intellectual Property</a></li>
+        <li><a href="#s17">Disclaimer of Warranties</a></li>
+        <li><a href="#s18">Limitation of Liability</a></li>
+        <li><a href="#s19">Indemnification</a></li>
+        <li><a href="#s20">Release of Claims</a></li>
+        <li><a href="#s21">Suspension &amp; Termination</a></li>
+        <li><a href="#s22">Dispute Resolution</a></li>
+        <li><a href="#s23">Governing Law</a></li>
+        <li><a href="#s24">General Provisions</a></li>
+        <li><a href="#s25">Contact</a></li>
+      </ol>
+    </nav>
+
+    <main class="content">
+
+      <h1 class="doc-title">Terms of Use</h1>
+      <p class="doc-subtitle">Waymate — Carpool Platform</p>
+
+      <div class="meta-bar">
+        <span><strong>Effective Date:</strong> July 3, 2026</span>
+        <span><strong>Last Updated:</strong> July 3, 2026</span>
+        <span><strong>Version:</strong> 1.1</span>
+      </div>
+
+      <div class="notice-box">
+        <strong>Agreement Required.</strong> These Terms of Use ("<strong>Terms</strong>") constitute a legally binding agreement between you and Waymate (Private) Limited ("<strong>Waymate</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"). By accessing or using the Waymate mobile application, website at <a href="https://waymate.pk">waymate.pk</a>, or any related services (collectively, the "<strong>Services</strong>"), you agree to be bound by these Terms and our <a href="/privacy-policy.html">Privacy Policy</a>. If you do not agree, you must immediately discontinue use of the Services.
+      </div>
+
+      <div class="warning-box">
+        <strong>IMPORTANT — PLEASE READ CAREFULLY.</strong> Waymate is a technology platform that facilitates introductions and coordination between independent users. Waymate does not provide transportation services, employ drivers, own vehicles, or supervise trips. You participate in carpool arrangements entirely at your own risk. Waymate expressly disclaims all liability for criminal acts, theft, assault, physical injury, death, property damage, or any other harm arising from or related to trips, user interactions, or misuse of the Services — whether occurring inside a vehicle, at pickup or drop-off locations, or through any use of the platform. Identity verification documents collected by Waymate are used solely to identify and locate user accounts; they do not constitute a guarantee of safety, character, or legality, and do not create any duty of care, warranty, or liability on the part of Waymate.
+      </div>
+
+      <!-- Section 1 -->
+      <section id="s1">
+        <h2>1. Introduction &amp; Acceptance</h2>
+        <p>
+          Waymate operates a subscription-based carpooling platform connecting Ride Hosts (drivers with available seats) and Passengers (individuals seeking shared commutes) for recurring routes in Pakistan. The Services include account registration, identity verification workflows, trip publishing and booking, live location tracking, in-app messaging, ratings, WayPoints monetization, subscriptions, and customer support features.
+        </p>
+        <p>
+          By clicking "I agree," completing onboarding, creating an account, booking or hosting a trip, or otherwise using the Services, you represent and warrant that: (a) you have read and understood these Terms; (b) you accept these Terms in their entirety; (c) you are at least 18 years of age; (d) you have the legal capacity to enter into a binding contract; and (e) your use of the Services complies with all applicable laws in Pakistan and any other jurisdiction that applies to you.
+        </p>
+        <p>
+          If you use the Services on behalf of an organization, you represent that you have authority to bind that organization, and "you" includes both you individually and the organization.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="s2">
+        <h2>2. Definitions</h2>
+        <dl class="definition-list">
+          <li><dt>"Ride Host" or "Host"</dt> <dd> means a user who publishes trips, operates a vehicle, and offers seats to Passengers through the Services.</dd></li>
+          <li><dt>"Passenger"</dt> <dd> means a user who searches for, requests, or books seats on trips published by Hosts.</dd></li>
+          <li><dt>"User" or "you"</dt> <dd> means any individual or entity that accesses or uses the Services.</dd></li>
+          <li><dt>"Trip"</dt> <dd> means a scheduled carpool journey coordinated through the Services, including all activities before, during, and after the physical commute.</dd></li>
+          <li><dt>"User Content"</dt> <dd> means any information, text, images, documents, messages, ratings, or other materials submitted by users through the Services.</dd></li>
+          <li><dt>"Verification"</dt> <dd> means the collection and review of identity documents (including CNIC, selfie, and driving license) for account identification purposes, as further described in Section 5 and Section 14.</dd></li>
+          <li><dt>"Third Party"</dt> <dd> means any person or entity other than Waymate and the users of the Services.</dd></li>
+        </dl>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="s3">
+        <h2>3. Nature of the Platform — Intermediary Only</h2>
+        <p>
+          <strong>Waymate is a neutral technology intermediary and marketplace platform.</strong> Waymate provides software tools that enable users to discover, communicate with, and coordinate shared commutes with other users. Waymate is not a transportation carrier, taxi service, ride-hailing operator, logistics company, travel agency, insurer, security provider, or employer of any Host or Passenger.
+        </p>
+        <p>Accordingly, you acknowledge and agree that:</p>
+        <ul>
+          <li>All transportation services are provided directly by Hosts to Passengers under arrangements made between those users;</li>
+          <li>Waymate does not control, direct, or supervise the manner, timing, route selection, driving behavior, vehicle condition, or conduct of any Host or Passenger;</li>
+          <li>Waymate does not set fares beyond providing suggested price ranges; final fare arrangements are between users;</li>
+          <li>Waymate does not guarantee that any trip will occur, complete successfully, or meet any user's expectations;</li>
+          <li>Any contract for shared transportation exists solely between the participating Host and Passenger(s), not with Waymate;</li>
+          <li>Waymate's role is limited to providing the platform, processing certain transactions (subscriptions, WayPoints), and maintaining account records.</li>
+        </ul>
+        <p>
+          Nothing in these Terms, in the Services, or in any communication from Waymate shall be construed to create a partnership, joint venture, agency, franchise, or employment relationship between Waymate and any user.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="s4">
+        <h2>4. Eligibility, Registration &amp; Account Security</h2>
+
+        <h3>4.1 Eligibility</h3>
+        <p>You must be at least 18 years of age and legally permitted to enter into binding contracts to use the Services. Hosts must hold a valid driving license recognized in Pakistan and meet all legal requirements to operate their registered vehicle.</p>
+
+        <h3>4.2 Accurate Information</h3>
+        <p>You agree to provide accurate, current, and complete information during registration and onboarding, and to update such information as necessary. You are solely responsible for the accuracy of all information you submit, including vehicle details, identity documents, profile information, and trip listings.</p>
+
+        <h3>4.3 Account Security</h3>
+        <p>You are responsible for maintaining the confidentiality of your account credentials, OTP verification access, and device security. You accept full responsibility for all activities conducted through your account, whether authorized by you or not, except where caused solely by Waymate's gross negligence in safeguarding its own systems (subject to the limitations in Section 18).</p>
+
+        <h3>4.4 One Account Per Person</h3>
+        <p>Each individual may maintain only one active account unless expressly authorized by Waymate in writing. Creating duplicate, fake, or impersonation accounts is prohibited and may result in permanent termination and referral to authorities.</p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="s5">
+        <h2>5. Identity Verification — Limited Purpose &amp; No Guarantee</h2>
+        <p>
+          Waymate may require or offer identity verification for Hosts and/or Passengers, which may include submission of CNIC (front and back), selfie photographs, driving license, and other documents described in our Privacy Policy.
+        </p>
+        <p><strong>You expressly acknowledge and agree that:</strong></p>
+        <ul>
+          <li>Verification is conducted for <strong>account identification, fraud prevention, and platform integrity purposes only</strong>;</li>
+          <li>A "verified" badge or approved verification status <strong>does not</strong> constitute a background check, criminal record clearance, character reference, fitness-to-drive certification, or safety guarantee;</li>
+          <li>Waymate <strong>does not</strong> warrant that any verified user is trustworthy, law-abiding, competent, sober, or safe to travel with;</li>
+          <li>Waymate <strong>does not</strong> guarantee the authenticity of documents submitted by users, notwithstanding reasonable review processes;</li>
+          <li>Verification may be revoked, suspended, or overridden at Waymate's discretion without prior notice;</li>
+          <li>Failure to complete verification may limit access to certain features but does not shift any risk or liability to Waymate.</li>
+        </ul>
+        <p>
+          You use the Services and accept trips with other users based entirely on your own judgment. Waymate strongly encourages users to exercise personal caution, inform trusted contacts of travel plans, and use in-app safety features; however, such encouragement does not create any legal duty or liability on Waymate's part.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="s6">
+        <h2>6. Ride Host Obligations</h2>
+        <p>If you use the Services as a Host, you agree that you are solely and exclusively responsible for:</p>
+        <ul>
+          <li>Owning, leasing, or having lawful authority to operate the vehicle used for trips;</li>
+          <li>Maintaining valid vehicle registration, insurance (where applicable by law), and roadworthiness;</li>
+          <li>Holding a valid driving license and complying with all traffic laws and regulations;</li>
+          <li>Accurately listing vehicle capacity, features, route details, and availability;</li>
+          <li>Safe operation of the vehicle, including speed, distraction, fatigue, and road conditions;</li>
+          <li>The conduct of all occupants in your vehicle to the extent required by applicable law;</li>
+          <li>Collection and handling of any cash or in-person payments arranged directly between users (Waymate does not process in-vehicle fare payments unless expressly stated);</li>
+          <li>Any injury, loss, or damage arising from your driving, your vehicle, or your conduct during or related to a trip.</li>
+        </ul>
+        <p>
+          Hosts acknowledge that offering seats through Waymate does not constitute commercial ride-hailing unless the Host independently complies with all applicable licensing, tax, and regulatory requirements. Waymate does not advise on or assume responsibility for a Host's regulatory compliance.
+        </p>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="s7">
+        <h2>7. Passenger Obligations</h2>
+        <p>If you use the Services as a Passenger, you agree that you are solely and exclusively responsible for:</p>
+        <ul>
+          <li>Evaluating the suitability of any Host, vehicle, and route before booking;</li>
+          <li>Arriving at agreed pickup points on time and behaving respectfully during trips;</li>
+          <li>Wearing seatbelts where available and complying with the Host's reasonable vehicle rules;</li>
+          <li>Not bringing prohibited items (weapons, illegal substances, hazardous materials) into a vehicle;</li>
+          <li>Your personal belongings — Waymate is not responsible for items lost, stolen, or damaged during trips;</li>
+          <li>Any injury, loss, or damage arising from your conduct or decisions during or related to a trip.</li>
+        </ul>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="s8">
+        <h2>8. Trip Conduct, Safety Features &amp; No Duty to Protect</h2>
+        <p>
+          Waymate may offer features intended to support user coordination and safety awareness, including live GPS tracking, proximity alerts, in-app chat, ratings, safety flags, support tickets, and emergency reporting channels. These features are provided <strong>"as is"</strong> for convenience only.
+        </p>
+        <p><strong>Waymate does not:</strong></p>
+        <ul>
+          <li>Monitor trips in real time or dispatch physical security or emergency responders;</li>
+          <li>Guarantee the accuracy, continuity, or availability of GPS or tracking data;</li>
+          <li>Verify the accuracy of user ratings, reviews, or safety reports before display;</li>
+          <li>Assume a duty to intervene in disputes, altercations, or emergencies occurring during trips;</li>
+          <li>Act as a guardian, chaperone, insurer, or guarantor of user safety.</li>
+        </ul>
+        <p>
+          In the event of an emergency, you must contact local emergency services (e.g., police, rescue, ambulance) immediately. Waymate's support channels are not a substitute for emergency services and may not be monitored continuously.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="s9">
+        <h2>9. Assumption of Risk</h2>
+        <p>
+          You acknowledge that sharing a vehicle with strangers or acquaintances involves inherent and significant risks, including but not limited to: traffic accidents, vehicle malfunction, road conditions, weather, criminal conduct by other users, theft of personal property, physical assault, sexual harassment, kidnapping, and other serious harm including death.
+        </p>
+        <p>
+          <strong>YOU VOLUNTARILY ASSUME ALL RISKS</strong> associated with using the Services, arranging trips, entering vehicles, sharing personal information with other users, and participating in carpool activities before, during, and after trips. Your decision to use the Services is made freely and with full understanding that Waymate does not eliminate, and cannot eliminate, these risks.
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="s10">
+        <h2>10. No Agency, Employment, or Partnership</h2>
+        <p>
+          Hosts are independent users and not employees, contractors, agents, or representatives of Waymate. Passengers are independent users and not customers of Waymate for transportation purposes. Waymate does not control work schedules, routes, fares collected in person, or the means and manner of driving.
+        </p>
+        <p>
+          No user has authority to bind Waymate, make warranties on Waymate's behalf, or represent that Waymate supervises, endorses, or guarantees any trip or user. Waymate does not provide benefits, workers' compensation, or employment-related protections to any user.
+        </p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="s11">
+        <h2>11. Prohibited Conduct</h2>
+        <p>You agree not to use the Services to:</p>
+        <ul>
+          <li>Violate any applicable law, regulation, or third-party rights;</li>
+          <li>Commit, facilitate, plan, or conceal criminal activity of any kind;</li>
+          <li>Harass, threaten, stalk, discriminate against, or endanger any person;</li>
+          <li>Submit false, forged, or stolen identity documents or vehicle information;</li>
+          <li>Impersonate any person or create fraudulent accounts;</li>
+          <li>Use the platform to scout victims, surveil individuals, or facilitate theft, robbery, kidnapping, or violence;</li>
+          <li>Transport illegal goods, weapons, or controlled substances;</li>
+          <li>Operate a vehicle while under the influence of alcohol or drugs;</li>
+          <li>Circumvent verification, payment, or safety systems;</li>
+          <li>Scrape, reverse engineer, or interfere with the Services or other users' data;</li>
+          <li>Send spam, malware, or abusive content through in-app chat or support channels;</li>
+          <li>Use Waymate's user data for purposes unrelated to legitimate carpool coordination.</li>
+        </ul>
+        <p>
+          Violation of this section may result in immediate account termination, preservation of records, and cooperation with law enforcement as described in Section 14. Waymate's enforcement actions do not create any ongoing duty to monitor or prevent future violations by other users.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="s12">
+        <h2>12. Criminal Misuse of the Services</h2>
+        <p>
+          Waymate expressly disclaims any and all responsibility and liability for criminal acts committed by any user or third party in connection with the Services, including but not limited to:
+        </p>
+        <ul>
+          <li>Theft, robbery, burglary, or handling of stolen property;</li>
+          <li>Fraud, identity theft, or financial scams targeting other users;</li>
+          <li>Assault, battery, sexual offenses, or harassment;</li>
+          <li>Kidnapping, unlawful confinement, or abduction;</li>
+          <li>Homicide, attempted homicide, or any conduct causing death or serious bodily injury;</li>
+          <li>Drug trafficking or possession of illegal substances;</li>
+          <li>Terrorism or threats to public safety;</li>
+          <li>Any use of the platform to locate, lure, transport, or exploit victims;</li>
+          <li>Any use of identity information or trip coordination features to facilitate crime.</li>
+        </ul>
+        <p>
+          If any user employs the Services — including trip booking, chat, location sharing, profile data, or verification workflows — as a tool, cover, or means to commit or facilitate crime, <strong>full legal and financial responsibility rests with the offending user(s) and not with Waymate.</strong>
+        </p>
+        <p>
+          Waymate does not undertake to prevent all criminal misuse of its platform. Users who suffer harm from criminal conduct must pursue remedies directly against the perpetrator(s) and applicable authorities. Waymate's potential cooperation with investigations (Section 14) is discretionary and does not imply prior fault, knowledge, or liability on Waymate's part.
+        </p>
+      </section>
+
+      <!-- Section 13 -->
+      <section id="s13">
+        <h2>13. Physical Harm, Death &amp; Property Loss During Trips</h2>
+        <p>
+          <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WAYMATE SHALL NOT BE LIABLE FOR ANY INJURY, DEATH, DISABILITY, EMOTIONAL DISTRESS, PROPERTY DAMAGE, THEFT, LOSS OF PERSONAL BELONGINGS, LOSS OF INCOME, OR ANY OTHER HARM</strong> arising out of or related to:
+        </p>
+        <ul>
+          <li>Any trip, whether completed, cancelled, abandoned, or disputed;</li>
+          <li>Any accident, collision, or traffic incident involving a Host's vehicle;</li>
+          <li>Any conduct of a Host, Passenger, or third party before, during, or after a trip;</li>
+          <li>Any condition of a vehicle, including mechanical failure, lack of maintenance, or absence of safety equipment;</li>
+          <li>Any pickup, drop-off, or waiting location chosen by users;</li>
+          <li>Any failure of GPS, tracking, notifications, or other platform features;</li>
+          <li>Any reliance on ratings, verification badges, or user profiles;</li>
+          <li>Any off-platform communication or conduct between users.</li>
+        </ul>
+        <p>
+          This disclaimer applies regardless of the legal theory asserted, including negligence (whether active or passive), gross negligence (where permissible), strict liability, product liability, misrepresentation, or breach of contract — except where liability cannot be excluded under mandatory applicable law.
+        </p>
+        <p>
+          Users participate in shared commutes entirely at their own risk. Waymate recommends that users maintain personal insurance coverage appropriate to their circumstances. Waymate does not provide auto, life, health, or travel insurance to users.
+        </p>
+      </section>
+
+      <!-- Section 14 -->
+      <section id="s14">
+        <h2>14. Identity Documents — Identification &amp; Law Enforcement Only</h2>
+        <p>
+          Waymate collects and retains identity verification documents (including CNIC, selfies, and driving licenses) as described in our <a href="/privacy-policy.html">Privacy Policy</a>. You acknowledge and agree to the following with respect to such documents:
+        </p>
+
+        <h3>14.1 Purpose Limited to Account Identification</h3>
+        <p>
+          Identity documents are collected and stored <strong>solely</strong> to: (a) identify and authenticate user accounts; (b) distinguish accounts in the event of disputes or reports; (c) locate the accounts involved in incidents reported to us or to authorities; and (d) comply with lawful requests from law enforcement or regulatory bodies. They are <strong>not</strong> collected to insure, guarantee, or underwrite user safety or lawful behavior.
+        </p>
+
+        <h3>14.2 No Responsibility for Document Accuracy or User Conduct</h3>
+        <p>
+          Waymate does not guarantee that submitted documents are genuine, unaltered, or belong to the submitting user. Approval of documents does not mean Waymate has verified criminal history, driving record, medical fitness, or moral character. <strong>Waymate bears no responsibility or liability whatsoever for any harm caused by a user who submitted false documents or who passed verification.</strong>
+        </p>
+
+        <h3>14.3 Cooperation With Authorities — Not an Admission of Liability</h3>
+        <p>
+          Waymate may, at its sole discretion and where permitted by law, provide account records and identity document information to law enforcement or judicial authorities investigating criminal activity. Such cooperation is undertaken as a civic and legal compliance matter only. It does not indicate that Waymate caused, contributed to, knew of, or should have prevented the underlying conduct, and it does not create any duty to investigate or prevent similar incidents in the future.
+        </p>
+
+        <h3>14.4 No Duty to Compensate Victims</h3>
+        <p>
+          The existence of identity documents in Waymate's systems does not impose on Waymate any obligation to compensate, indemnify, or otherwise make whole any victim of crime, theft, assault, or other harm connected to the Services — regardless of whether Waymate provides account information to authorities or suspends offending accounts after the fact.
+        </p>
+      </section>
+
+      <!-- Section 15 -->
+      <section id="s15">
+        <h2>15. Payments, Subscriptions &amp; WayPoints</h2>
+
+        <h3>15.1 Subscriptions</h3>
+        <p>Access to certain features may require a paid subscription. Subscription fees, trial terms, and renewal periods are displayed in the app and may change with notice. Subscriptions are fees for platform access, not transportation fares.</p>
+
+        <h3>15.2 WayPoints</h3>
+        <p>WayPoints are an internal virtual currency with no guaranteed cash value. WayPoints may be earned or spent according to in-app rules and may be modified or discontinued by Waymate at any time. WayPoints are not deposits, securities, or legal tender.</p>
+
+        <h3>15.3 In-Person Fare Arrangements</h3>
+        <p>Fare arrangements between Hosts and Passengers for shared commutes are primarily between those users. Waymate is not responsible for non-payment, overcharging, fare disputes, or financial loss arising from in-person transactions between users.</p>
+
+        <h3>15.4 Refunds</h3>
+        <p>Refund eligibility for subscriptions and WayPoint purchases is determined by Waymate's published policies and applicable consumer law. Refund policies do not extend to fare disputes between users or losses arising from cancelled or incomplete trips unless expressly stated.</p>
+
+        <h3>15.5 Taxes</h3>
+        <p>Users are solely responsible for any taxes arising from their use of the Services or income earned from hosting trips.</p>
+      </section>
+
+      <!-- Section 16 -->
+      <section id="s16">
+        <h2>16. Intellectual Property</h2>
+        <p>
+          The Services, including all software, design, logos, trademarks, content, and documentation, are owned by Waymate or its licensors and protected by intellectual property laws. You receive a limited, non-exclusive, non-transferable, revocable license to use the Services for personal, non-commercial carpool coordination in accordance with these Terms.
+        </p>
+        <p>
+          You may not copy, modify, distribute, sell, or create derivative works from the Services without Waymate's prior written consent. User Content you submit grants Waymate a worldwide, royalty-free license to use, store, display, and process such content as necessary to operate the Services and enforce these Terms.
+        </p>
+      </section>
+
+      <!-- Section 17 -->
+      <section id="s17">
+        <h2>17. Disclaimer of Warranties</h2>
+        <div class="caps-block">
+          <p><strong>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE.</strong> To the fullest extent permitted by law, Waymate disclaims all warranties, including implied warranties of merchantability, fitness for a particular purpose, title, non-infringement, accuracy, and quiet enjoyment.</p>
+          <p style="margin-top: 1rem;">Waymate does not warrant that: (a) the Services will be uninterrupted, secure, or error-free; (b) any user is who they claim to be; (c) any trip will be safe, timely, or successful; (d) verification processes will detect fraud or criminal intent; (e) GPS or tracking data will be accurate or continuously available; or (f) any ratings, reviews, or user-generated content are truthful or reliable.</p>
+        </div>
+      </section>
+
+      <!-- Section 18 -->
+      <section id="s18">
+        <h2>18. Limitation of Liability</h2>
+        <div class="caps-block">
+          <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WAYMATE, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, AFFILIATES, OR LICENSORS BE LIABLE FOR ANY:</strong></p>
+          <ul>
+            <li>Indirect, incidental, special, consequential, exemplary, or punitive damages;</li>
+            <li>Loss of profits, revenue, data, goodwill, or business opportunity;</li>
+            <li>Personal injury, bodily harm, emotional distress, or death;</li>
+            <li>Property damage, theft, or loss of personal belongings;</li>
+            <li>Any damages arising from criminal acts of users or third parties;</li>
+            <li>Any damages arising from trips, user interactions, or use or misuse of the Services;</li>
+          </ul>
+          <p style="margin-top: 1rem;"><strong>WHETHER BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, EVEN IF WAYMATE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</strong></p>
+          <p style="margin-top: 1rem;">Where liability cannot be fully excluded, Waymate's aggregate total liability to you for all claims arising out of or relating to the Services or these Terms shall not exceed the greater of: (a) the amounts you paid to Waymate for subscriptions and WayPoint purchases in the twelve (12) months preceding the claim; or (b) five hundred Pakistani Rupees (PKR 500).</p>
+        </div>
+        <p>
+          Some jurisdictions do not allow certain exclusions or limitations. In such cases, Waymate's liability shall be limited to the minimum extent permitted by law. Nothing in these Terms excludes liability for fraud or wilful misconduct by Waymate itself where such exclusion is prohibited by mandatory law.
+        </p>
+      </section>
+
+      <!-- Section 19 -->
+      <section id="s19">
+        <h2>19. Indemnification</h2>
+        <p>
+          You agree to <strong>indemnify, defend, and hold harmless</strong> Waymate, its directors, officers, employees, agents, affiliates, and licensors from and against any and all claims, demands, actions, proceedings, losses, liabilities, damages, fines, penalties, costs, and expenses (including reasonable legal fees) arising out of or related to:
+        </p>
+        <ul>
+          <li>Your use or misuse of the Services;</li>
+          <li>Your participation in any trip as a Host or Passenger;</li>
+          <li>Your User Content, including false or fraudulent documents;</li>
+          <li>Your violation of these Terms or applicable law;</li>
+          <li>Your infringement of any third-party rights;</li>
+          <li>Any injury, death, theft, or property damage caused by your conduct;</li>
+          <li>Any criminal activity you commit or facilitate using the Services;</li>
+          <li>Any dispute between you and another user.</li>
+        </ul>
+        <p>
+          Waymate may assume exclusive control of the defense of any matter subject to indemnification, at your expense. You agree to cooperate fully with Waymate's defense. This indemnification obligation survives termination of your account and these Terms.
+        </p>
+      </section>
+
+      <!-- Section 20 -->
+      <section id="s20">
+        <h2>20. Release of Claims</h2>
+        <p>
+          To the fullest extent permitted by law, you hereby <strong>release, waive, and forever discharge</strong> Waymate and its directors, officers, employees, agents, affiliates, and licensors from any and all claims, demands, causes of action, and liabilities of every kind, known or unknown, suspected or unsuspected, arising out of or in any way connected with:
+        </p>
+        <ul>
+          <li>Trips arranged through the Services;</li>
+          <li>Conduct of any Host, Passenger, or third party;</li>
+          <li>Any theft, assault, accident, or criminal act;</li>
+          <li>Any reliance on verification, ratings, or platform safety features;</li>
+          <li>Any use or misuse of identity documents or account data by other users.</li>
+        </ul>
+        <p>
+          If you are a resident of a jurisdiction that requires a specific form of waiver or that does not permit general releases of unknown claims, this release applies to the maximum extent permitted in your jurisdiction.
+        </p>
+      </section>
+
+      <!-- Section 21 -->
+      <section id="s21">
+        <h2>21. Account Suspension &amp; Termination</h2>
+        <p>
+          Waymate may suspend, restrict, or terminate your account at any time, with or without notice, for any reason including violation of these Terms, suspected fraud, safety reports, or legal compliance. Upon termination, your right to use the Services ceases immediately.
+        </p>
+        <p>
+          Provisions that by their nature should survive termination shall survive, including Sections 3, 5, 9, 12, 13, 14, 17, 18, 19, 20, 22, and 23. Waymate may retain records as described in the Privacy Policy after account deletion.
+        </p>
+        <p>
+          Termination of an offending user's account does not create any obligation on Waymate to compensate other users affected by that user's conduct prior to termination.
+        </p>
+      </section>
+
+      <!-- Section 22 -->
+      <section id="s22">
+        <h2>22. Dispute Resolution</h2>
+
+        <h3>22.1 Informal Resolution</h3>
+        <p>Before initiating formal proceedings, you agree to contact <a href="mailto:legal@waymate.pk">legal@waymate.pk</a> and attempt to resolve disputes informally for at least thirty (30) days.</p>
+
+        <h3>22.2 Governing Disputes Between Users</h3>
+        <p>Disputes between Hosts and Passengers (including fare disputes, no-shows, or conduct during trips) must be resolved directly between those users. Waymate is not obligated to mediate, adjudicate, or compensate either party.</p>
+
+        <h3>22.3 Disputes With Waymate</h3>
+        <p>Any dispute arising from these Terms or the Services that cannot be resolved informally shall be subject to the exclusive jurisdiction described in Section 23. You waive any right to participate in class actions or collective proceedings against Waymate to the extent permitted by law.</p>
+      </section>
+
+      <!-- Section 23 -->
+      <section id="s23">
+        <h2>23. Governing Law &amp; Jurisdiction</h2>
+        <p>
+          These Terms are governed by the laws of the Islamic Republic of Pakistan, without regard to conflict-of-law principles. Subject to mandatory consumer protections that cannot be waived, you agree that the courts located in <strong>Lahore, Pakistan</strong> shall have exclusive jurisdiction over disputes arising from or relating to these Terms or the Services.
+        </p>
+        <p>
+          Waymate makes no representation that the Services are appropriate or available outside Pakistan. Users accessing the Services from other jurisdictions do so at their own initiative and are responsible for compliance with local laws.
+        </p>
+      </section>
+
+      <!-- Section 24 -->
+      <section id="s24">
+        <h2>24. General Provisions</h2>
+
+        <h3>24.1 Changes to Terms</h3>
+        <p>Waymate may modify these Terms at any time. Material changes will be notified via in-app notice, email, or website posting. Continued use after the effective date constitutes acceptance. If you disagree, you must stop using the Services.</p>
+
+        <h3>24.2 Severability</h3>
+        <p>If any provision is held invalid or unenforceable, the remaining provisions remain in full force. The invalid provision shall be modified to the minimum extent necessary to make it enforceable while preserving the parties' intent.</p>
+
+        <h3>24.3 No Waiver</h3>
+        <p>Failure to enforce any provision does not constitute a waiver of that provision or any other provision.</p>
+
+        <h3>24.4 Assignment</h3>
+        <p>You may not assign these Terms without Waymate's prior written consent. Waymate may assign these Terms in connection with a merger, acquisition, or sale of assets.</p>
+
+        <h3>24.5 Entire Agreement</h3>
+        <p>These Terms, together with the Privacy Policy and any in-app policies referenced herein, constitute the entire agreement between you and Waymate regarding the Services and supersede all prior agreements and understandings.</p>
+
+        <h3>24.6 Language</h3>
+        <p>These Terms are written in English. Translated versions, if provided, are for convenience only. In the event of conflict, the English version prevails.</p>
+      </section>
+
+      <!-- Section 25 -->
+      <section id="s25">
+        <h2>25. Contact Information</h2>
+        <p>For questions about these Terms, contact:</p>
+        <div class="contact-block">
+          <p><strong>Waymate (Private) Limited — Legal</strong></p>
+          <p>Email: <a href="mailto:legal@waymate.pk">legal@waymate.pk</a></p>
+          <p>General: <a href="mailto:hello@waymate.pk">hello@waymate.pk</a></p>
+          <p>Website: <a href="https://waymate.pk">https://waymate.pk</a></p>
+        </div>
+        <p>For privacy-related inquiries, see our <a href="/privacy-policy.html">Privacy Policy</a> and contact <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a>.</p>
+      </section>
+
+      <footer class="doc-footer">
+        <p>© 2026 Waymate (Private) Limited. All rights reserved.</p>
+        <p>See also: <a href="/privacy-policy.html">Privacy Policy</a> · <a href="/">waymate.pk</a></p>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

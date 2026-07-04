@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Waymate Privacy Policy — How we collect, use, protect, and govern your personal information on Pakistan's carpool platform." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+  <title>Privacy Policy — Waymate</title>
+  <style>
+    :root {
+      --color-primary: #ff9100;
+      --color-primary-dark: #e67e00;
+      --color-text: #1a1a1a;
+      --color-text-muted: #4a4a4a;
+      --color-text-light: #6b6b6b;
+      --color-bg: #fafafa;
+      --color-surface: #ffffff;
+      --color-border: #e8e8e8;
+      --color-accent-bg: #fff8f0;
+      --color-highlight: #fff3e0;
+      --font-sans: 'Quicksand', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --max-width: 820px;
+      --sidebar-width: 260px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    }
+
+    .site-header-inner {
+      max-width: calc(var(--max-width) + var(--sidebar-width) + 4rem);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--color-text); }
+
+    .back-link {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+
+    .back-link:hover { color: var(--color-primary-dark); }
+
+    /* Layout */
+    .page-wrapper {
+      max-width: calc(var(--max-width) + var(--sidebar-width) + 4rem);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem 1.25rem 3rem;
+      }
+    }
+
+    /* Sidebar TOC */
+    .toc {
+      position: sticky;
+      top: 5.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+    }
+
+    @media (max-width: 960px) {
+      .toc {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    .toc-title {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-light);
+      margin: 0 0 0.75rem 0.5rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: toc;
+    }
+
+    .toc li {
+      counter-increment: toc;
+      margin-bottom: 0.15rem;
+    }
+
+    .toc a {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+      line-height: 1.4;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .toc a:hover {
+      background: var(--color-accent-bg);
+      color: var(--color-primary-dark);
+    }
+
+    /* Main content */
+    .content {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 2.5rem 2.75rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.03);
+    }
+
+    @media (max-width: 640px) {
+      .content { padding: 1.75rem 1.25rem; }
+    }
+
+    .doc-title {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .doc-subtitle {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      margin: 0 0 1.5rem;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      padding: 1rem 1.25rem;
+      background: var(--color-accent-bg);
+      border-radius: 10px;
+      border-left: 4px solid var(--color-primary);
+      margin-bottom: 2rem;
+    }
+
+    .meta-bar strong { color: var(--color-text); }
+
+    .notice-box {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.6;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-highlight);
+      border: 1px solid #ffe0b2;
+      border-radius: 10px;
+      margin-bottom: 2.5rem;
+      color: #5d4037;
+    }
+
+    .notice-box strong { color: #3e2723; }
+
+    .warning-box {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.65;
+      padding: 1.25rem 1.5rem;
+      background: #fff5f5;
+      border: 1px solid #ffcdd2;
+      border-radius: 10px;
+      margin-bottom: 2.5rem;
+      color: #5d1a1a;
+    }
+
+    .warning-box strong { color: #3e0000; }
+
+    .caps-block {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      padding: 1rem 1.25rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    section {
+      margin-bottom: 2.75rem;
+      scroll-margin-top: 5.5rem;
+    }
+
+    section:last-of-type { margin-bottom: 0; }
+
+    h2 {
+      font-family: var(--font-sans);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 1.75rem 0 0.75rem;
+    }
+
+    h4 {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      margin: 1.25rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    li > ul, li > ol { margin-top: 0.4rem; margin-bottom: 0.4rem; }
+
+    strong { font-weight: 600; color: var(--color-text); }
+
+    a { color: var(--color-primary-dark); }
+
+    a:hover { text-decoration: none; }
+
+    .definition-list {
+      margin: 1rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .definition-list li {
+      margin-bottom: 0.75rem;
+      padding-left: 0;
+    }
+
+    .definition-list dt {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: var(--color-text);
+      display: inline;
+    }
+
+    .definition-list dd {
+      display: inline;
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-weight: 1rem;
+      margin: 1rem 0 1.25rem;
+      font-size: 0.9375rem;
+    }
+
+    th, td {
+      border: 1px solid var(--color-border);
+      padding: 0.65rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      background: var(--color-accent-bg);
+      color: var(--color-text);
+    }
+
+    .contact-block {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-block p {
+      margin-bottom: 0.35rem;
+      font-size: 0.9375rem;
+    }
+
+    footer.doc-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      color: var(--color-text-light);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="logo">WAY<span>MATE</span></a>
+      <a href="/" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#s1">Introduction</a></li>
+        <li><a href="#s2">Definitions</a></li>
+        <li><a href="#s3">Scope &amp; Applicability</a></li>
+        <li><a href="#s4">Data Controller</a></li>
+        <li><a href="#s5">Information We Collect</a></li>
+        <li><a href="#s6">How We Collect Data</a></li>
+        <li><a href="#s7">Purposes &amp; Legal Bases</a></li>
+        <li><a href="#s8">Identity Verification</a></li>
+        <li><a href="#s9">Location &amp; Tracking</a></li>
+        <li><a href="#s10">Communications Data</a></li>
+        <li><a href="#s11">Payments &amp; WayPoints</a></li>
+        <li><a href="#s12">Sharing &amp; Disclosure</a></li>
+        <li><a href="#s13">Inter-User Data Exposure</a></li>
+        <li><a href="#s14">User Conduct</a></li>
+        <li><a href="#s15">Security Measures</a></li>
+        <li><a href="#s16">Data Retention</a></li>
+        <li><a href="#s17">Your Privacy Rights</a></li>
+        <li><a href="#s18">Children's Privacy</a></li>
+        <li><a href="#s19">International Transfers</a></li>
+        <li><a href="#s20">Third-Party Services</a></li>
+        <li><a href="#s21">Cookies &amp; Analytics</a></li>
+        <li><a href="#s22">Automated Processing</a></li>
+        <li><a href="#s23">Breach Notification</a></li>
+        <li><a href="#s24">Limitation of Liability</a></li>
+        <li><a href="#s25">Policy Changes</a></li>
+        <li><a href="#s26">Contact &amp; Complaints</a></li>
+        <li><a href="#s27">Governing Law</a></li>
+      </ol>
+    </nav>
+
+    <main class="content">
+
+      <h1 class="doc-title">Privacy Policy</h1>
+      <p class="doc-subtitle">Waymate — Carpool Platform</p>
+
+      <div class="meta-bar">
+        <span><strong>Effective Date:</strong> July 3, 2026</span>
+        <span><strong>Last Updated:</strong> July 3, 2026</span>
+        <span><strong>Version:</strong> 1.1</span>
+      </div>
+
+      <div class="notice-box">
+        <strong>Important Notice.</strong> This Privacy Policy is a binding legal document between you and Waymate. By creating an account, accessing the Waymate mobile application, website, or any related services, you acknowledge that you have read, understood, and agree to the collection, use, disclosure, and processing of your personal information as described herein, together with our <a href="/terms-of-use.html">Terms of Use</a>. If you do not agree, you must not use our Services.
+      </div>
+
+      <div class="warning-box">
+        <strong>Liability Disclaimer.</strong> Waymate is a technology platform only. We do not guarantee the safety, conduct, or identity of any user. Identity documents we collect are used solely to identify and locate user accounts—not to warrant trustworthiness or prevent crime. Waymate is not responsible or liable for any theft, assault, harassment, property loss, death, criminal misuse of data, or any other harm arising from trips, user interactions, data shared between users, or misuse of the Services. See Section 24 and our <a href="/terms-of-use.html">Terms of Use</a> for full disclaimers.
+      </div>
+
+      <!-- Section 1 -->
+      <section id="s1">
+        <h2>1. Introduction</h2>
+        <p>
+          Waymate ("<strong>Waymate</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") operates a subscription-based carpooling platform that connects verified Ride Hosts and Passengers for recurring shared commutes in Pakistan. Our mobile applications (iOS and Android), website at <a href="https://waymate.pk">waymate.pk</a>, administrative systems, and all associated services are collectively referred to as the "<strong>Services</strong>."
+        </p>
+        <p>
+          This Privacy Policy explains, in detail, what personal information we collect, why we collect it, how we use and share it, how long we keep it, and what rights you may have under applicable law. Waymate operates solely as a technology intermediary connecting independent users; nothing in this Policy creates a duty of care, safety guarantee, or liability for user conduct, trips, or criminal acts.
+        </p>
+        <p>
+          This Policy applies to all individuals who interact with Waymate, including Ride Hosts, Passengers, website visitors, support correspondents, referral participants, and individuals whose data is submitted to us by another user (for example, emergency contacts or individuals named in a live-tracking share link).
+        </p>
+        <p>
+          This Privacy Policy must be read together with our <a href="/terms-of-use.html">Terms of Use</a>, which govern your use of the Services and contain extensive limitations of liability, indemnification, and release provisions. In the event of any conflict between this Policy and the Terms regarding liability, accountability, or remedies, the Terms of Use prevail.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="s2">
+        <h2>2. Definitions</h2>
+        <p>For the purposes of this Privacy Policy, the following terms have the meanings set out below:</p>
+        <dl class="definition-list">
+          <li><dt>"Personal Information"</dt> <dd> means any information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular individual, including as defined under applicable data protection laws in Pakistan and any other jurisdiction that applies to our processing activities.</dd></li>
+          <li><dt>"Sensitive Personal Information"</dt> <dd> includes government-issued identification documents (such as CNIC), biometric or likeness data (such as selfies used for verification), precise geolocation data, financial or payment-related identifiers, and any other category of data that applicable law treats as sensitive or requiring heightened protection.</dd></li>
+          <li><dt>"Ride Host" or "Host"</dt> <dd> means a user who publishes trips, operates a vehicle, and offers seats to Passengers through the Services.</dd></li>
+          <li><dt>"Passenger"</dt> <dd> means a user who searches for, requests, or books seats on trips published by Hosts.</dd></li>
+          <li><dt>"User" or "you"</dt> <dd> means any individual who registers for, accesses, or uses the Services in any capacity.</dd></li>
+          <li><dt>"Processing"</dt> <dd> means any operation performed on Personal Information, including collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure, dissemination, restriction, erasure, or destruction.</dd></li>
+          <li><dt>"Data Controller"</dt> <dd> means the entity that determines the purposes and means of Processing Personal Information. For the Services, Waymate is the Data Controller unless otherwise stated.</dd></li>
+          <li><dt>"Third Party"</dt> <dd> means any person or entity other than Waymate, the User, and Waymate's service providers acting on our instructions.</dd></li>
+        </dl>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="s3">
+        <h2>3. Scope &amp; Applicability</h2>
+        <p>This Privacy Policy applies to Personal Information Processed by Waymate in connection with:</p>
+        <ul>
+          <li>Registration, authentication, and account management via phone number and one-time passwords (OTP);</li>
+          <li>Onboarding, identity verification, and document review workflows;</li>
+          <li>Trip creation, search, booking, seat selection, and recurring route subscriptions;</li>
+          <li>Live trip tracking, GPS location recording, proximity alerts, and third-party tracking share links;</li>
+          <li>In-app messaging between Hosts and Passengers;</li>
+          <li>Ratings, reviews, safety flags, and support tickets;</li>
+          <li>Subscriptions, WayPoints (virtual currency), referral programs, and in-app advertising;</li>
+          <li>Push notifications, WhatsApp OTP and transactional messaging;</li>
+          <li>AI-assisted customer support chat; and</li>
+          <li>Our website, marketing pages, and administrative back-office systems.</li>
+        </ul>
+        <p>
+          This Policy does not apply to information that you choose to share outside the Services (for example, exchanging personal phone numbers in person during a trip, or communicating through third-party messaging apps). Misuse of information by other users is the responsibility of those users, not Waymate, subject to the limitations in Section 24 and our Terms of Use.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="s4">
+        <h2>4. Data Controller Information</h2>
+        <p>
+          The Data Controller responsible for your Personal Information is <strong>Waymate (Private) Limited</strong>, a company incorporated in Pakistan and operating the Waymate carpool platform.
+        </p>
+        <div class="contact-block">
+          <p><strong>Waymate (Private) Limited</strong></p>
+          <p>Email: <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a></p>
+          <p>General inquiries: <a href="mailto:hello@waymate.pk">hello@waymate.pk</a></p>
+          <p>Website: <a href="https://waymate.pk">https://waymate.pk</a></p>
+        </div>
+        <p>
+          For data protection inquiries, rights requests, or complaints, please contact us at <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a>. We will respond within the timeframes set out in Section 17 and Section 26.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="s5">
+        <h2>5. Information We Collect</h2>
+        <p>We collect Personal Information in the categories described below. The specific data collected depends on whether you use Waymate as a Host, Passenger, or both, and on the permissions you grant.</p>
+
+        <h3>5.1 Account &amp; Profile Information</h3>
+        <ul>
+          <li>Mobile phone number (required for account creation and authentication);</li>
+          <li>First name and last name;</li>
+          <li>Gender (used for seat-map display and trip matching preferences);</li>
+          <li>Usage role (Passenger, Host, or both);</li>
+          <li>Email address (if provided);</li>
+          <li>City or location preference;</li>
+          <li>Profile picture;</li>
+          <li>Referral code and referral relationship data;</li>
+          <li>Verification badges (verified Passenger, verified Host);</li>
+          <li>Account status (active, deactivated, deleted);</li>
+          <li>Ratings and review aggregates (host rating, passenger rating, and counts).</li>
+        </ul>
+
+        <h3>5.2 Identity Verification Documents</h3>
+        <p>For Hosts and Passengers seeking verified status, we collect and store:</p>
+        <ul>
+          <li>Computerized National Identity Card (CNIC) — front and back images;</li>
+          <li>Live or uploaded selfie for identity matching;</li>
+          <li>Driving license (required for Host verification);</li>
+          <li>Character certificate (where applicable);</li>
+          <li>Document verification status, review timestamps, and administrative notes.</li>
+        </ul>
+
+        <h3>5.3 Vehicle Information (Hosts)</h3>
+        <ul>
+          <li>Vehicle type, brand, model, variant, year, and color;</li>
+          <li>Registration number, engine number, and chassis number;</li>
+          <li>Passenger capacity, total seats, available seats, helmet availability;</li>
+          <li>Vehicle features and safety attributes;</li>
+          <li>Vehicle photographs (front and back);</li>
+          <li>Owner notes and default vehicle designation.</li>
+        </ul>
+
+        <h3>5.4 Trip, Route &amp; Booking Data</h3>
+        <ul>
+          <li>Trip names, departure times, recurrence patterns, and operating days;</li>
+          <li>Start and end location labels, coordinates, route polylines, and distance/duration estimates;</li>
+          <li>Price ranges, seat availability, gender preferences, and comfort features;</li>
+          <li>Trip requests, booking confirmations, seat positions, agreed fares, and cancellation records;</li>
+          <li>Booking series for recurring commutes;</li>
+          <li>Trip run status, start/completion timestamps, and session records;</li>
+          <li>Pickup and drop-off coordinates for passenger sessions;</li>
+          <li>Search snapshots captured at the time of booking or request.</li>
+        </ul>
+
+        <h3>5.5 Location &amp; GPS Data</h3>
+        <ul>
+          <li>Real-time GPS coordinates during active Host trip runs (latitude, longitude, speed, heading, accuracy, and timestamp);</li>
+          <li>Append-only location chunks forming a full GPS trail for completed trips;</li>
+          <li>Last known location of active trips;</li>
+          <li>Traveled route polylines after trip completion;</li>
+          <li>Proximity event data (for example, when a Host is within a defined distance of a Passenger pickup point);</li>
+          <li>Device location permissions status and related technical metadata.</li>
+        </ul>
+
+        <h3>5.6 Communications Data</h3>
+        <ul>
+          <li>In-app chat messages (text and images) between Hosts and Passengers;</li>
+          <li>Message delivery and read receipts;</li>
+          <li>Conversation metadata (titles, status, timestamps, unread counts);</li>
+          <li>WhatsApp OTP codes and delivery status (we store hashed OTP values, not plaintext codes);</li>
+          <li>WhatsApp webhook events and message metadata where applicable;</li>
+          <li>Push notification tokens (Expo push token and platform identifier);</li>
+          <li>In-app notification history.</li>
+        </ul>
+
+        <h3>5.7 Safety, Reviews &amp; Support Data</h3>
+        <ul>
+          <li>Trip reviews (scores, tags, and comments) submitted by Hosts and Passengers;</li>
+          <li>Safety flags (including categories such as harassment, dangerous driving, no-show, smoking, misbehavior, fake profile, and vehicle mismatch);</li>
+          <li>Support tickets (subject, message, category, emergency flag, and associated trip references);</li>
+          <li>AI support chat conversations, messages, and tool-call logs;</li>
+          <li>Profile field change history (name, email, city edits).</li>
+        </ul>
+
+        <h3>5.8 Payment, Subscription &amp; Monetization Data</h3>
+        <ul>
+          <li>Subscription plan, price, trial price, start/end dates, and status;</li>
+          <li>WayPoints ledger transactions (earnings, redemptions, booking fees, referral rewards, ad rewards, admin adjustments);</li>
+          <li>Waypoint purchase records and package selections;</li>
+          <li>Payment processor transaction references (we do not store full payment card numbers on our servers);</li>
+          <li>Ad interaction data where rewarded or banner advertisements are displayed.</li>
+        </ul>
+
+        <h3>5.9 Live Tracking Share Data</h3>
+        <ul>
+          <li>Share tokens, creation timestamps, expiry and revocation records;</li>
+          <li>Track anchor coordinates and timestamps for shared views;</li>
+          <li>Identity of the user who created the share link;</li>
+          <li>Access logs related to shared tracking URLs where technically feasible.</li>
+        </ul>
+
+        <h3>5.10 Technical &amp; Device Information</h3>
+        <ul>
+          <li>Device type, operating system, and app version;</li>
+          <li>IP address, network information, and general device identifiers;</li>
+          <li>Crash logs, diagnostic data, and performance metrics;</li>
+          <li>Authentication session data and security event logs;</li>
+          <li>Onboarding step completion records and associated JSON payloads.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="s6">
+        <h2>6. How We Collect Personal Information</h2>
+        <p>We collect Personal Information through the following means:</p>
+
+        <h3>6.1 Directly From You</h3>
+        <p>When you register, complete onboarding, upload documents, create trips or vehicles, send messages, submit reviews, purchase subscriptions, contact support, or otherwise interact with the Services.</p>
+
+        <h3>6.2 Automatically</h3>
+        <p>When you use the app with location permissions enabled, receive push notifications, view advertisements, or when our systems log technical events necessary for security and service delivery.</p>
+
+        <h3>6.3 From Other Users</h3>
+        <p>When a Host or Passenger initiates a trip request, booking, chat conversation, review, or safety report that references your account or trip session.</p>
+
+        <h3>6.4 From Third-Party Service Providers</h3>
+        <p>Including identity verification partners, cloud hosting providers, mapping and routing services, payment processors, WhatsApp Business API providers, push notification services, and advertising networks—solely to the extent necessary to provide the Services.</p>
+
+        <h3>6.5 From Referral Links</h3>
+        <p>When you sign up using another user's referral code, we record the referring user's identity in association with your account.</p>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="s7">
+        <h2>7. Purposes &amp; Legal Bases for Processing</h2>
+        <p>We Process your Personal Information for the following purposes. Where applicable law requires a legal basis, we rely on one or more of: <strong>contractual necessity</strong> (to provide the Services you request), <strong>legitimate interests</strong> (to operate, secure, and improve the platform, balanced against your rights), <strong>legal obligation</strong>, and <strong>consent</strong> (where required, such as for certain optional features or marketing).</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Account creation &amp; authentication</td>
+              <td>Phone OTP verification, session management, account recovery</td>
+            </tr>
+            <tr>
+              <td>Identity &amp; safety verification</td>
+              <td>CNIC, selfie, and license review; verified badges; fraud prevention</td>
+            </tr>
+            <tr>
+              <td>Trip marketplace operations</td>
+              <td>Publishing routes, matching, booking, seat maps, recurring subscriptions</td>
+            </tr>
+            <tr>
+              <td>Live tracking &amp; trip execution</td>
+              <td>GPS recording, proximity alerts, share links, trip completion records</td>
+            </tr>
+            <tr>
+              <td>Communication facilitation</td>
+              <td>In-app chat, notifications, WhatsApp OTP, support responses</td>
+            </tr>
+            <tr>
+              <td>Trust &amp; safety</td>
+              <td>Reviews, safety flags, account suspension, incident investigation</td>
+            </tr>
+            <tr>
+              <td>Monetization</td>
+              <td>Subscriptions, WayPoints, booking fees, referrals, advertisements</td>
+            </tr>
+            <tr>
+              <td>Legal &amp; compliance</td>
+              <td>Record keeping, responding to lawful requests, dispute resolution</td>
+            </tr>
+            <tr>
+              <td>Service improvement</td>
+              <td>Analytics, debugging, feature development, admin oversight</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          We do not sell your Personal Information to third parties for their independent marketing purposes. We do not use your identity verification documents for advertising. We do not permit Hosts or Passengers to download another user's verification documents through the consumer-facing application.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="s8">
+        <h2>8. Identity Verification &amp; Sensitive Documents</h2>
+        <p>
+          Waymate may collect CNIC images, selfies, driving licenses, and other verification documents as described in Section 5. When you submit such documents, you consent to our collection, storage, review, and Processing solely for <strong>account identification, fraud prevention, and locating accounts involved in reports or lawful investigations</strong>—not as a safety guarantee or background check.
+        </p>
+        <p><strong>You expressly acknowledge that:</strong></p>
+        <ul>
+          <li>Verification documents are used to identify user accounts and assist in locating accounts referenced in incidents or lawful requests;</li>
+          <li>A "verified" badge does <strong>not</strong> mean Waymate guarantees a user's identity, character, criminal history, driving competence, or safety;</li>
+          <li>Waymate does <strong>not</strong> warrant that submitted documents are genuine or that verification detects fraud or criminal intent;</li>
+          <li>Verification documents are not displayed in full to other users in the consumer application;</li>
+          <li>We may retain verification records as described in Section 16;</li>
+          <li><strong>Waymate bears no responsibility or liability</strong> for any harm caused by a user who submitted false documents or who passed verification, including theft, assault, or any criminal conduct during or related to trips.</li>
+        </ul>
+        <p>
+          Submitting false, forged, or misleading verification documents is prohibited and may result in account termination and referral to authorities. Waymate may provide account and document records to law enforcement where permitted by law; such cooperation does not admit liability or create any duty to compensate affected parties.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="s9">
+        <h2>9. Location Data &amp; Live Tracking</h2>
+        <p>
+          Location data is essential to Waymate's carpooling functionality. When a Host starts a trip run, the app may collect continuous or periodic GPS samples that are transmitted to our servers and associated with the active trip session.
+        </p>
+
+        <h3>9.1 What Location Data Is Collected</h3>
+        <p>During active trip runs, we may collect latitude, longitude, speed, heading, accuracy estimates, and timestamps. After trips complete, we may store a merged polyline representing the traveled route.</p>
+
+        <h3>9.2 Who Can See Location Data</h3>
+        <ul>
+          <li><strong>Passengers with confirmed bookings</strong> on the active trip may view live Host location during the trip run through the app;</li>
+          <li><strong>Users who create tracking share links</strong> may share live tracking with third parties via tokenized URLs, subject to expiry and revocation controls;</li>
+          <li><strong>Waymate personnel</strong> may access location data for safety investigations, support, fraud prevention, and legal compliance;</li>
+          <li>Location data is <strong>not</strong> made publicly searchable or published on open directories.</li>
+        </ul>
+
+        <h3>9.3 Your Controls</h3>
+        <p>You may revoke location permissions at the device level; however, certain features (including hosting trips with live tracking) will not function without location access during active trip runs. You may revoke tracking share links before their expiry where the app provides revocation controls.</p>
+
+        <h3>9.4 No Liability for Location Data</h3>
+        <p>
+          Location and tracking features are provided on an <strong>"as is"</strong> basis for user convenience. Waymate does not guarantee the accuracy, continuity, or security of GPS data. You use location features and share tracking links at your own risk. Waymate is <strong>not liable</strong> for unauthorized access to location data caused by other users, share-link recipients, device compromise, or user error, except where liability cannot be excluded under mandatory applicable law. See Section 24 and our <a href="/terms-of-use.html">Terms of Use</a>.
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="s10">
+        <h2>10. Communications Data</h2>
+
+        <h3>10.1 In-App Chat</h3>
+        <p>Trip-scoped chat enables Hosts and Passengers to coordinate pickups, timing, and trip details. Messages may include text and images. We store message content, timestamps, delivery/read status, and participant identifiers.</p>
+
+        <h3>10.2 Monitoring &amp; Safety Review (Discretionary)</h3>
+        <p>
+          Waymate may, but is <strong>not obligated to</strong>, access, monitor, review, or retain chat messages where we deem it useful to respond to legal process, enforce our Terms of Use, or address reported violations. We may use automated tools to flag content. Any review or enforcement action is discretionary and does not create an ongoing duty to monitor communications or prevent harm. Waymate is not liable for chat content, user misconduct in chat, or failure to detect or act on messages.
+        </p>
+
+        <h3>10.3 WhatsApp &amp; SMS</h3>
+        <p>We use WhatsApp and/or SMS channels to deliver OTP codes and transactional messages. Message delivery metadata may be logged. WhatsApp inbound webhook events may be stored for troubleshooting and compliance.</p>
+
+        <h3>10.4 Push Notifications</h3>
+        <p>We store push tokens to deliver trip alerts, booking updates, proximity notifications, and service announcements. You may disable push notifications through device settings; however, critical safety or account messages may still be delivered through other channels where necessary.</p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="s11">
+        <h2>11. Payments, Subscriptions &amp; WayPoints</h2>
+        <p>
+          Waymate offers subscription plans and an internal virtual currency called WayPoints. Payment processing is handled by third-party payment providers. We receive confirmation of payment status and limited transaction metadata but do not store full payment card numbers on our servers.
+        </p>
+        <p>We Process payment-related information to:</p>
+        <ul>
+          <li>Activate and renew subscriptions;</li>
+          <li>Process WayPoint purchases and redemptions;</li>
+          <li>Apply booking fees and issue refunds in WayPoints where applicable;</li>
+          <li>Administer referral rewards and promotional credits;</li>
+          <li>Detect billing fraud and resolve payment disputes.</li>
+        </ul>
+        <p>
+          WayPoints have no cash value outside the Services unless expressly stated. Transaction histories are retained for audit, dispute resolution, and monetization integrity.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="s12">
+        <h2>12. How We Share &amp; Disclose Personal Information</h2>
+        <p>We may share Personal Information in the following circumstances:</p>
+
+        <h3>12.1 With Other Users (Platform-Mediated Sharing)</h3>
+        <p>When you participate in trips, certain profile and trip information is visible to matched Hosts or Passengers as described in Section 13.</p>
+
+        <h3>12.2 With Service Providers</h3>
+        <p>We engage trusted vendors for cloud hosting, database management, identity verification, mapping, payment processing, messaging, push notifications, analytics, and customer support. These providers Process data on our instructions and under contractual confidentiality and security obligations.</p>
+
+        <h3>12.3 For Legal Reasons</h3>
+        <p>We may disclose information when we believe in good faith that disclosure is necessary to comply with applicable law, regulation, legal process, or enforceable governmental request; to protect the rights, property, or safety of Waymate, our users, or the public; or to detect and prevent fraud or security issues.</p>
+
+        <h3>12.4 Business Transfers</h3>
+        <p>If Waymate is involved in a merger, acquisition, financing, reorganization, or sale of assets, Personal Information may be transferred subject to confidentiality arrangements and notice to users where required by law.</p>
+
+        <h3>12.5 With Your Direction</h3>
+        <p>When you create a live tracking share link or explicitly authorize a disclosure through in-app features.</p>
+
+        <p><strong>We do not sell Personal Information.</strong> We do not share CNIC or raw verification document images with other users through the app.</p>
+      </section>
+
+      <!-- Section 13 -->
+      <section id="s13">
+        <h2>13. Inter-User Data Exposure &amp; Trip Context</h2>
+        <p>Because Waymate connects individuals who share physical commutes, certain Personal Information is necessarily visible to other users. You should understand the following defaults:</p>
+
+        <h3>13.1 Visible to Matched Hosts &amp; Passengers</h3>
+        <ul>
+          <li>First name, profile photo, ratings, and verification badge status;</li>
+          <li>Trip details including route labels, departure time, seat selection, and booking status;</li>
+          <li>Live location (Host) during active trip runs for confirmed Passengers;</li>
+          <li>Chat messages sent within the trip conversation;</li>
+          <li>Phone numbers may be disclosed in limited circumstances (for example, active trip coordination or support escalation) as implemented in the Services from time to time.</li>
+        </ul>
+
+        <h3>13.2 Not Visible to Other Users</h3>
+        <ul>
+          <li>Full CNIC numbers and verification document images;</li>
+          <li>Full driving license images;</li>
+          <li>Payment card details;</li>
+          <li>Hashed OTP codes and authentication secrets;</li>
+          <li>Complete historical GPS trails except as authorized for active trip context or share links.</li>
+        </ul>
+
+        <h3>13.3 Your Responsibilities</h3>
+        <p>You are solely responsible for your use of information about other users. You agree not to misuse information obtained through the Services, including using another user's phone number, location history, or chat content for harassment, stalking, unsolicited marketing, discrimination, theft, or any unlawful purpose. Violations may result in account termination and referral to authorities.</p>
+
+        <h3>13.4 No Waymate Liability for Inter-User Data Misuse</h3>
+        <p>
+          Waymate facilitates limited data sharing between matched users as necessary for carpool coordination. <strong>Waymate is not responsible or liable</strong> for how users collect, use, disclose, or misuse each other's Personal Information before, during, or after trips—including criminal use of such data for theft, stalking, fraud, or violence. Remedies for inter-user harm lie against the offending user(s) and applicable authorities, not against Waymate, except where mandatory law provides otherwise.
+        </p>
+      </section>
+
+      <!-- Section 14 -->
+      <section id="s14">
+        <h2>14. User Conduct &amp; Discretionary Platform Actions</h2>
+        <p>
+          Waymate is a technology platform that enables users to connect for shared commutes. Waymate <strong>does not</strong> supervise trips, guarantee user behavior, or assume responsibility for user interactions. We may, at our sole discretion and without obligation, take actions such as:
+        </p>
+        <ul>
+          <li>Operating identity verification workflows (without guaranteeing outcomes);</li>
+          <li>Reviewing safety flags or support reports;</li>
+          <li>Suspending or terminating accounts that violate our Terms of Use;</li>
+          <li>Preserving records for lawful requests;</li>
+          <li>Providing in-app reporting channels (which are not emergency services);</li>
+          <li>Cooperating with law enforcement when legally required or voluntarily, without admission of liability.</li>
+        </ul>
+        <p>
+          The availability of these features does not impose on Waymate any duty to prevent crime, investigate every report, or protect users from harm. Failure to take action against a user does not create liability for Waymate. Users participate in trips and share data entirely at their own risk, as set out in our <a href="/terms-of-use.html">Terms of Use</a>.
+        </p>
+      </section>
+
+      <!-- Section 15 -->
+      <section id="s15">
+        <h2>15. Data Security Measures</h2>
+        <p>
+          We implement administrative, technical, and physical safeguards designed to protect Personal Information against unauthorized access, alteration, disclosure, or destruction. These measures include, where appropriate:
+        </p>
+        <ul>
+          <li>Encryption of data in transit using TLS/HTTPS;</li>
+          <li>Encryption at rest for sensitive categories including verification documents;</li>
+          <li>Role-based access controls and authentication for administrative systems;</li>
+          <li>Hashed storage of OTP codes with limited validity windows;</li>
+          <li>Tokenized live tracking share URLs with expiry and revocation support;</li>
+          <li>Logging and monitoring of administrative access;</li>
+          <li>Vendor security assessments for material subprocessors;</li>
+          <li>Employee and contractor confidentiality obligations.</li>
+        </ul>
+        <p>
+          We implement reasonable safeguards designed to protect Personal Information; however, <strong>no system is completely secure</strong>. Waymate does not guarantee that Personal Information will never be accessed, disclosed, altered, or destroyed by unauthorized parties. To the maximum extent permitted by law, Waymate disclaims liability for security incidents except where notification or other response is strictly required by applicable law. See Section 23 and Section 24.
+        </p>
+      </section>
+
+      <!-- Section 16 -->
+      <section id="s16">
+        <h2>16. Data Retention</h2>
+        <p>We retain Personal Information for as long as necessary to fulfill the purposes described in this Policy, unless a longer retention period is required or permitted by law.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Typical Retention Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Account profile data</td>
+              <td>Duration of account plus up to 3 years after deletion for dispute and legal purposes</td>
+            </tr>
+            <tr>
+              <td>Verification documents</td>
+              <td>Duration of account plus up to 5 years after deletion where required for fraud prevention and legal compliance</td>
+            </tr>
+            <tr>
+              <td>Trip &amp; GPS records</td>
+              <td>Up to 3 years after trip completion unless longer retention is required for investigations</td>
+            </tr>
+            <tr>
+              <td>Chat messages</td>
+              <td>Up to 2 years after conversation archival unless retained for active investigations</td>
+            </tr>
+            <tr>
+              <td>Support tickets &amp; safety reports</td>
+              <td>Up to 5 years after resolution</td>
+            </tr>
+            <tr>
+              <td>Payment &amp; subscription records</td>
+              <td>As required by applicable tax and commercial law (typically 5–7 years)</td>
+            </tr>
+            <tr>
+              <td>Technical logs</td>
+              <td>Up to 12 months unless needed for security investigations</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          When you request account deletion, we will deactivate your account and delete or anonymize Personal Information within a reasonable period, except where retention is necessary for legal compliance, fraud prevention, outstanding disputes, or safety investigations. Residual copies may persist in encrypted backups for a limited period before automated purging.
+        </p>
+      </section>
+
+      <!-- Section 17 -->
+      <section id="s17">
+        <h2>17. Your Privacy Rights</h2>
+        <p>Subject to applicable law, you may have the following rights regarding your Personal Information:</p>
+        <ul>
+          <li><strong>Access:</strong> Request confirmation of whether we Process your Personal Information and obtain a copy of certain data we hold about you;</li>
+          <li><strong>Correction:</strong> Request correction of inaccurate or incomplete Personal Information;</li>
+          <li><strong>Deletion:</strong> Request deletion of your account and associated Personal Information, subject to lawful retention exceptions;</li>
+          <li><strong>Restriction:</strong> Request restriction of Processing in certain circumstances;</li>
+          <li><strong>Portability:</strong> Request a structured, commonly used, machine-readable copy of certain data you provided to us;</li>
+          <li><strong>Withdrawal of consent:</strong> Where Processing is based on consent, withdraw consent at any time without affecting the lawfulness of prior Processing;</li>
+          <li><strong>Objection:</strong> Object to Processing based on legitimate interests where applicable law provides this right;</li>
+          <li><strong>Complaint:</strong> Lodge a complaint with a supervisory authority or regulator where applicable.</li>
+        </ul>
+
+        <h3>17.1 How to Exercise Your Rights</h3>
+        <p>
+          Submit requests to <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a> from the email address associated with your account or through in-app support. We may verify your identity before fulfilling requests. We aim to respond within <strong>30 days</strong> of receipt; complex requests may require an extension with notice.
+        </p>
+
+        <h3>17.2 Limitations</h3>
+        <p>
+          We may decline requests where fulfillment would impair the rights of others, interfere with active safety investigations, violate legal retention obligations, or where the request is manifestly unfounded or excessive. We will explain the basis for any denial where required by law.
+        </p>
+      </section>
+
+      <!-- Section 18 -->
+      <section id="s18">
+        <h2>18. Children's Privacy</h2>
+        <p>
+          The Services are intended for individuals who are at least <strong>18 years of age</strong>. We do not knowingly collect Personal Information from children under 18. If we learn that we have collected Personal Information from a child under 18 without verifiable parental consent, we will take steps to delete that information promptly. If you believe a minor has provided us with Personal Information, contact <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a>.
+        </p>
+      </section>
+
+      <!-- Section 19 -->
+      <section id="s19">
+        <h2>19. International Data Transfers</h2>
+        <p>
+          Waymate is based in Pakistan and primarily stores and Processes data within Pakistan or with cloud service providers that may maintain servers in other countries. Where Personal Information is transferred across borders, we implement appropriate safeguards such as contractual data protection clauses with vendors, access minimization, and encryption to protect your information in line with this Policy.
+        </p>
+        <p>
+          By using the Services, you acknowledge that your information may be Processed in jurisdictions that may have different data protection laws than your country of residence. Waymate uses commercially reasonable measures where applicable but <strong>does not accept liability</strong> for Processing by third-party infrastructure providers beyond what is required by mandatory law. See Section 24.
+        </p>
+      </section>
+
+      <!-- Section 20 -->
+      <section id="s20">
+        <h2>20. Third-Party Services &amp; SDKs</h2>
+        <p>The Services integrate third-party services that may collect information according to their own privacy policies, including but not limited to:</p>
+        <ul>
+          <li>Cloud infrastructure and database providers;</li>
+          <li>Mapping, geocoding, and routing services;</li>
+          <li>Payment gateways;</li>
+          <li>WhatsApp / Meta messaging infrastructure;</li>
+          <li>Push notification services (including Expo);</li>
+          <li>Mobile advertising networks for banner and rewarded ads;</li>
+          <li>Identity verification partners;</li>
+          <li>AI/LLM providers for customer support chat.</li>
+        </ul>
+        <p>
+          Waymate engages third-party vendors to operate the Services. Those vendors Process data under their own terms and our contractual arrangements where applicable. <strong>Waymate is not liable</strong> for acts or omissions of third-party service providers, including data breaches, service outages, or unauthorized disclosure attributable to vendors, except to the minimum extent required by mandatory applicable law. Your remedies regarding third-party Processing may lie against the relevant vendor or offending user, not Waymate.
+        </p>
+        <p>Links to third-party websites on our marketing site are not governed by this Policy. Review their privacy policies before providing personal information.</p>
+      </section>
+
+      <!-- Section 21 -->
+      <section id="s21">
+        <h2>21. Cookies &amp; Similar Technologies</h2>
+        <p>
+          Our website may use cookies, local storage, and similar technologies to enable core functionality, remember preferences, measure traffic, and improve user experience. Mobile applications may use analogous device identifiers and analytics SDKs.
+        </p>
+        <p>Categories of technologies we may use include:</p>
+        <ul>
+          <li><strong>Strictly necessary:</strong> Required for site operation and security;</li>
+          <li><strong>Functional:</strong> Remember settings and choices;</li>
+          <li><strong>Analytics:</strong> Understand usage patterns in aggregate;</li>
+          <li><strong>Advertising:</strong> Deliver and measure in-app ads where enabled.</li>
+        </ul>
+        <p>You may control cookies through browser settings. Disabling certain cookies may limit website functionality. In-app ad personalization may be limited through device-level advertising settings where available.</p>
+      </section>
+
+      <!-- Section 22 -->
+      <section id="s22">
+        <h2>22. Automated Decision-Making &amp; Profiling</h2>
+        <p>We may use automated Processing for purposes including:</p>
+        <ul>
+          <li>Fraud detection and duplicate account identification;</li>
+          <li>Document verification assistance and status assignment;</li>
+          <li>Trip search ranking and route matching;</li>
+          <li>Chat or support message classification for safety routing;</li>
+          <li>Dynamic booking fee tier assignment based on fare ranges.</li>
+        </ul>
+        <p>
+          We do not make solely automated decisions that produce legal or similarly significant effects without appropriate human review where required by law. If you believe an automated decision adversely affected you, contact <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a> to request human review where applicable.
+        </p>
+      </section>
+
+      <!-- Section 23 -->
+      <section id="s23">
+        <h2>23. Data Breach Notification</h2>
+        <p>
+          If Waymate becomes aware of a security incident affecting Personal Information, we may take steps we deem appropriate, including investigation and containment. Where notification to users or authorities is <strong>strictly required by applicable law</strong>, we will comply with those legal requirements. Nothing in this Section expands Waymate's liability beyond Section 24 or our Terms of Use, and notification where provided does not constitute an admission of fault, negligence, or responsibility for any resulting harm.
+        </p>
+        <p>
+          You acknowledge that data breaches may occur despite reasonable precautions and that Waymate is not liable for incidents caused by third parties, user negligence, or factors outside our control, except as mandatory law requires.
+        </p>
+      </section>
+
+      <!-- Section 24 -->
+      <section id="s24">
+        <h2>24. Limitation of Liability &amp; No Accountability</h2>
+        <p>
+          This Section aligns with and supplements the limitation of liability, indemnification, assumption of risk, and release provisions in our <a href="/terms-of-use.html">Terms of Use</a>. In the event of conflict, the Terms of Use govern.
+        </p>
+
+        <h3>24.1 Platform Intermediary — No Duty of Care</h3>
+        <p>
+          Waymate is a technology intermediary only. We do not provide transportation, employ users, or guarantee the identity, conduct, or safety of any Host, Passenger, or third party. <strong>Nothing in this Privacy Policy creates a duty of care, fiduciary duty, safety obligation, or warranty</strong> regarding how Personal Information is used by other users or how users behave during trips.
+        </p>
+
+        <h3>24.2 Identity Documents — Identification Only</h3>
+        <p>
+          CNIC, selfie, driving license, and related verification data are collected and retained <strong>solely to identify user accounts and locate accounts involved in reports or lawful investigations</strong>. They do not constitute a background check, criminal clearance, or trust endorsement. Waymate is <strong>not liable</strong> for any harm arising from false documents, failed verification, or reliance on verification badges—including theft, assault, kidnapping, homicide, or any criminal act during or related to a trip.
+        </p>
+
+        <h3>24.3 Criminal &amp; Inter-User Misuse of Data</h3>
+        <p>
+          Waymate disclaims all liability for criminal or unlawful use of the Services or Personal Information by any user or third party, including using the platform or data obtained through it to commit or facilitate theft, robbery, fraud, stalking, harassment, assault, kidnapping, murder, or any other offense. Full responsibility rests with the perpetrator(s). Waymate's optional cooperation with law enforcement does not imply prior knowledge, fault, or liability, and does not oblige Waymate to compensate victims.
+        </p>
+
+        <h3>24.4 Trips, Location Data &amp; Physical Harm</h3>
+        <p>
+          Waymate is <strong>not liable</strong> for any injury, death, emotional distress, property damage, theft of belongings, or other harm occurring during or in connection with trips, pickup/drop-off locations, live tracking, share links, chat messages, or off-platform contact between users—regardless of whether Personal Information was involved.
+        </p>
+
+        <h3>24.5 Security Incidents &amp; Third Parties</h3>
+        <p>
+          To the maximum extent permitted by applicable law, Waymate is not liable for unauthorized access, disclosure, or loss of Personal Information caused by cyberattacks, vendor failures, user device compromise, share-link misuse, or other events except where liability cannot be excluded by law. Subprocessors and integrated third-party services are independent; Waymate is not responsible for their acts or omissions.
+        </p>
+
+        <h3>24.6 Cap on Liability</h3>
+        <div class="caps-block">
+          <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WAYMATE'S AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THIS POLICY, THE PROCESSING OF YOUR PERSONAL INFORMATION, OR THE SERVICES SHALL NOT EXCEED THE GREATER OF: (A) AMOUNTS YOU PAID TO WAYMATE IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM; OR (B) FIVE HUNDRED PAKISTANI RUPEES (PKR 500).</strong></p>
+          <p style="margin-top: 1rem;"><strong>IN NO EVENT SHALL WAYMATE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR PERSONAL INJURY, DEATH, OR PROPERTY LOSS, ARISING FROM OR RELATED TO USER CONDUCT, TRIPS, DATA MISUSE, OR SECURITY INCIDENTS.</strong></p>
+        </div>
+
+        <h3>24.7 Indemnification &amp; Release</h3>
+        <p>
+          You agree to indemnify and hold harmless Waymate from claims arising from your use of the Services, your Processing of other users' data, or your participation in trips, as further set out in our Terms of Use. To the fullest extent permitted by law, you release Waymate from all claims related to other users' misuse of Personal Information or criminal conduct connected to the Services.
+        </p>
+
+        <h3>24.8 No Remedies From Waymate for User Harm</h3>
+        <p>
+          Waymate is not obligated to provide compensation, WayPoints credits, subscription extensions, or other remedies to users affected by another user's conduct, data misuse, or criminal activity. Any enforcement or account action Waymate takes is discretionary and does not create precedent or ongoing duty.
+        </p>
+      </section>
+
+      <!-- Section 25 -->
+      <section id="s25">
+        <h2>25. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in our Services, legal requirements, or operational practices. When we make material changes, we will provide notice through one or more of: in-app notification, email to your registered address, website banner, or updated effective date on this page.
+        </p>
+        <p>
+          Your continued use of the Services after the effective date of an updated Policy constitutes acceptance of the revised Policy, except where applicable law requires explicit consent for specific changes. If you do not agree to an updated Policy, you must stop using the Services and may request account deletion under Section 17.
+        </p>
+        <p>We encourage you to review this page periodically. Prior versions may be available upon request to <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a>.</p>
+      </section>
+
+      <!-- Section 26 -->
+      <section id="s26">
+        <h2>26. Contact, Complaints &amp; Dispute Resolution</h2>
+        <p>For privacy-related questions, rights requests, or complaints, contact:</p>
+        <div class="contact-block">
+          <p><strong>Data Protection Contact</strong></p>
+          <p>Waymate (Private) Limited</p>
+          <p>Email: <a href="mailto:privacy@waymate.pk">privacy@waymate.pk</a></p>
+          <p>Subject line: "Privacy Request — [Your Name]"</p>
+        </div>
+        <p>
+          We will acknowledge complaints within <strong>7 business days</strong> and aim to resolve them within <strong>30 days</strong>. If you are dissatisfied with our response, you may escalate to applicable regulatory authorities in Pakistan or your jurisdiction where you have standing to complain.
+        </p>
+        <p>
+          For emergencies during an active trip, contact local emergency services immediately. Waymate support channels are not emergency services and Waymate is not responsible for emergency response or outcomes.
+        </p>
+      </section>
+
+      <!-- Section 27 -->
+      <section id="s27">
+        <h2>27. Governing Law &amp; Jurisdiction</h2>
+        <p>
+          This Privacy Policy is governed by the laws of the Islamic Republic of Pakistan, without regard to conflict-of-law principles. Disputes relating to this Policy, Personal Information Processing, or liability are subject to the exclusive jurisdiction provisions and dispute resolution terms in our <a href="/terms-of-use.html">Terms of Use</a>, including limitations of liability in Section 24 above.
+        </p>
+        <p>
+          Subject to mandatory consumer or data protection rights that cannot be waived by contract, courts located in Lahore, Pakistan shall have primary jurisdiction. You acknowledge that many claims against Waymate related to user conduct, trips, or data misuse are released and barred under Section 24 and the Terms of Use.
+        </p>
+        <p>
+          If any provision of this Policy is found invalid or unenforceable, the remaining provisions remain in effect. Waymate's failure to enforce any provision does not constitute a waiver.
+        </p>
+      </section>
+
+      <footer class="doc-footer">
+        <p>© 2026 Waymate (Private) Limited. All rights reserved.</p>
+        <p>See also: <a href="/terms-of-use.html">Terms of Use</a> · <a href="/">waymate.pk</a></p>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "carpooling-tips",
+    "name": "Carpooling Tips",
+    "description": "Practical advice to make every shared ride smoother, friendlier, and more reliable.",
+    "icon": "lightbulb",
+    "accent": "primary"
+  },
+  {
+    "slug": "city-guides",
+    "name": "City Guides",
+    "description": "Commute smarter in Lahore, Islamabad, Karachi, and beyond with local route insights.",
+    "icon": "location_city",
+    "accent": "secondary"
+  },
+  {
+    "slug": "save-money",
+    "name": "Save Money",
+    "description": "Cut fuel, parking, and ride-hailing costs by sharing your daily commute.",
+    "icon": "savings",
+    "accent": "secondary"
+  },
+  {
+    "slug": "safety-trust",
+    "name": "Safety & Trust",
+    "description": "How Waymate keeps rides verified, respectful, and secure for everyone.",
+    "icon": "verified_user",
+    "accent": "primary"
+  },
+  {
+    "slug": "environment",
+    "name": "Green Commuting",
+    "description": "Fewer cars on the road means cleaner air and a healthier Pakistan.",
+    "icon": "eco",
+    "accent": "tertiary"
+  },
+  {
+    "slug": "ride-hosts",
+    "name": "For Ride Hosts",
+    "description": "Earn from empty seats, set your schedule, and build a trusted rider community.",
+    "icon": "directions_car",
+    "accent": "primary"
+  },
+  {
+    "slug": "passengers",
+    "name": "For Passengers",
+    "description": "Find affordable seats, pick your route, and enjoy stress-free daily travel.",
+    "icon": "airline_seat_recline_extra",
+    "accent": "secondary"
+  },
+  {
+    "slug": "waymate-news",
+    "name": "Waymate Updates",
+    "description": "Product news, new cities, features, and stories from the Waymate community.",
+    "icon": "campaign",
+    "accent": "tertiary"
+  }
+]

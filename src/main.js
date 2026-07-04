@@ -125,54 +125,20 @@ function initTabs() {
   document.getElementById('tab-hosts')?.addEventListener('click', () => switchTab('hosts'));
 }
 
-function initLegal() {
-  const main = document.getElementById('main-content');
-  const footer = document.getElementById('site-footer');
-  const header = document.getElementById('site-header');
+function initLegalRedirects() {
+  const redirects = {
+    privacy: '/privacy-policy.html',
+    terms: '/terms-of-use.html',
+  };
 
-  function showLegal(id) {
-    document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
-    const panel = document.getElementById(`legal-${id}`);
-    if (panel) {
-      main?.setAttribute('hidden', '');
-      footer?.setAttribute('hidden', '');
-      header?.setAttribute('hidden', '');
-      panel.classList.add('visible');
-      window.scrollTo({ top: 0 });
-      history.pushState(null, '', `#${id}`);
-    }
-  }
-
-  function hideLegal() {
-    document.querySelectorAll('.legal-panel').forEach((p) => p.classList.remove('visible'));
-    main?.removeAttribute('hidden');
-    footer?.removeAttribute('hidden');
-    header?.removeAttribute('hidden');
-  }
-
-  document.querySelectorAll('[data-legal]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      showLegal(link.getAttribute('data-legal'));
-    });
-  });
-
-  document.querySelectorAll('[data-legal-back]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      hideLegal();
-      history.pushState(null, '', '#top');
-    });
-  });
-
-  window.addEventListener('hashchange', () => {
+  function maybeRedirect() {
     const hash = location.hash.slice(1);
-    if (hash === 'terms' || hash === 'privacy') showLegal(hash);
-    else hideLegal();
-  });
+    const target = redirects[hash];
+    if (target) window.location.replace(target);
+  }
 
-  const hash = location.hash.slice(1);
-  if (hash === 'terms' || hash === 'privacy') showLegal(hash);
+  window.addEventListener('hashchange', maybeRedirect);
+  maybeRedirect();
 }
 
 document.getElementById('year').textContent = String(new Date().getFullYear());
@@ -183,6 +149,6 @@ initDemoVideo();
 initScrollHeader();
 initNav();
 initTabs();
-initLegal();
+initLegalRedirects();
 
 window.switchTab = switchTab;
