@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://waymate.pk/sitemap-articles.xml
+Sitemap: https://waymate.pk/sitemap.xml

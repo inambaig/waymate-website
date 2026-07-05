@@ -14,7 +14,6 @@ const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content');
 const ARTICLES_DIR = path.join(CONTENT_DIR, 'articles');
 const OUTPUT_DIR = path.join(ROOT, 'public', 'articles');
-const STAGING_DIR = path.join(ROOT, '.article-build');
 
 const PAGE_SIZE = 10;
 const SITE_URL = process.env.VITE_SITE_URL ?? 'https://waymate.pk';
@@ -82,9 +81,60 @@ function clearDir(dir) {
   ensureDir(dir);
 }
 
-function publishStaging() {
-  clearDir(OUTPUT_DIR);
-  fs.renameSync(STAGING_DIR, OUTPUT_DIR);
+function publishStaging(stagingDir) {
+  const prevDir = `${OUTPUT_DIR}.prev`;
+  if (fs.existsSync(prevDir)) {
+    fs.rmSync(prevDir, { recursive: true, force: true });
+  }
+  if (fs.existsSync(OUTPUT_DIR)) {
+    fs.renameSync(OUTPUT_DIR, prevDir);
+  }
+  fs.renameSync(stagingDir, OUTPUT_DIR);
+  if (fs.existsSync(prevDir)) {
+    fs.rmSync(prevDir, { recursive: true, force: true });
+  }
+}
+
+function createStagingDir() {
+  return path.join(ROOT, `.article-build-${process.pid}-${Date.now()}`);
+}
+
+function urlEntry(loc, { changefreq = 'weekly', priority = '0.8' } = {}) {
+  return `  <url>
+    <loc>${loc}</loc>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+}
+
+function buildPagesSitemap() {
+  const pages = [
+    { loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'weekly' },
+    { loc: `${SITE_URL}/pricing.html`, priority: '0.9', changefreq: 'monthly' },
+    { loc: `${SITE_URL}/privacy-policy.html`, priority: '0.4', changefreq: 'yearly' },
+    { loc: `${SITE_URL}/terms-of-use.html`, priority: '0.4', changefreq: 'yearly' },
+  ];
+
+  const entries = pages.map((page) => urlEntry(page.loc, page)).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries}
+</urlset>
+`;
+}
+
+function buildSitemapIndex() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${SITE_URL}/sitemap-pages.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>${SITE_URL}/sitemap-articles.xml</loc>
+  </sitemap>
+</sitemapindex>
+`;
 }
 
 function buildSitemap(categories, articlesByCategory) {
@@ -104,11 +154,9 @@ function buildSitemap(categories, articlesByCategory) {
 
   const entries = urls
     .map(
-      (url) => `  <url>
-    <loc>${url}</loc>
-    <changefreq>weekly</changefreq>
-    <priority>${url.includes('.html') && !url.endsWith('/articles/') ? '0.8' : '0.9'}</priority>
-  </url>`
+      (url) => urlEntry(url, {
+        priority: url.includes('.html') && !url.endsWith('/articles/') ? '0.8' : '0.9',
+      })
     )
     .join('\n');
 
@@ -132,10 +180,11 @@ export function buildArticles() {
     if (list) list.push(article);
   }
 
-  clearDir(STAGING_DIR);
+  const stagingDir = createStagingDir();
+  ensureDir(stagingDir);
 
   writeFile(
-    path.join(STAGING_DIR, 'index.html'),
+    path.join(stagingDir, 'index.html'),
     renderArticlesIndex({ siteUrl: SITE_URL, categories, articlesByCategory })
   );
 
@@ -154,9 +203,9 @@ export function buildArticles() {
       });
 
       if (page === 1) {
-        writeFile(path.join(STAGING_DIR, category.slug, 'index.html'), html);
+        writeFile(path.join(stagingDir, category.slug, 'index.html'), html);
       } else {
-        writeFile(path.join(STAGING_DIR, category.slug, 'page', `${page}.html`), html);
+        writeFile(path.join(stagingDir, category.slug, 'page', `${page}.html`), html);
       }
     }
 
@@ -164,7 +213,7 @@ export function buildArticles() {
       const related = articles.filter((a) => a.slug !== article.slug).slice(0, 2);
       const htmlBody = marked.parse(article.body);
       writeFile(
-        path.join(STAGING_DIR, category.slug, `${article.slug}.html`),
+        path.join(stagingDir, category.slug, `${article.slug}.html`),
         renderArticlePage({
           siteUrl: SITE_URL,
           category,
@@ -176,9 +225,11 @@ export function buildArticles() {
     }
   }
 
-  publishStaging();
+  publishStaging(stagingDir);
 
   writeFile(path.join(ROOT, 'public', 'sitemap-articles.xml'), buildSitemap(categories, articlesByCategory));
+  writeFile(path.join(ROOT, 'public', 'sitemap-pages.xml'), buildPagesSitemap());
+  writeFile(path.join(ROOT, 'public', 'sitemap.xml'), buildSitemapIndex());
 
   const totalArticles = allArticles.length;
   console.log(`Built ${totalArticles} articles across ${categories.length} categories → public/articles/`);

@@ -7,9 +7,21 @@ import { bundleArticleAssets } from './scripts/bundle-article-assets.mjs';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
+let buildInFlight = null;
+
 async function buildAllArticles() {
-  buildArticles();
-  await bundleArticleAssets();
+  if (buildInFlight) return buildInFlight;
+
+  buildInFlight = (async () => {
+    buildArticles();
+    await bundleArticleAssets();
+  })();
+
+  try {
+    await buildInFlight;
+  } finally {
+    buildInFlight = null;
+  }
 }
 
 function articlesRoutingMiddleware(req, _res, next) {
@@ -45,8 +57,7 @@ function articlesPlugin() {
     configureServer(server) {
       server.middlewares.use(articlesRoutingMiddleware);
 
-      buildAllArticles().then(() => {
-        const watchPaths = [
+      const watchPaths = [
           resolve(__dirname, 'content'),
           resolve(__dirname, 'src/articles.js'),
           resolve(__dirname, 'src/articles.css'),
@@ -67,7 +78,6 @@ function articlesPlugin() {
             scheduleRebuild();
           }
         });
-      });
     },
   };
 }
@@ -77,9 +87,17 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [tailwindcss(), articlesPlugin()],
+    build: {
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, 'index.html'),
+          pricing: resolve(__dirname, 'pricing.html'),
+        },
+      },
+    },
     server: {
       watch: {
-        ignored: ['**/.article-build/**', '**/.article-assets/**', '**/public/articles/**', '**/public/article-assets/**'],
+        ignored: ['**/.article-build*/**', '**/.article-assets/**', '**/public/articles/**', '**/public/article-assets/**'],
       },
     },
     define: {

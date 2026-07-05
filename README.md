@@ -63,7 +63,14 @@ npm run upgrade:articles  # apply pillar + tier-2 content upgrades
 ```
 
 Generated pages live at `/articles/`, `/articles/{category}/`, and `/articles/{category}/{slug}.html`.
-Sitemap: `/sitemap-articles.xml`
+
+**Sitemaps** (regenerated on `npm run build:articles`):
+
+| File | Contents |
+|------|----------|
+| `/sitemap.xml` | Index pointing to pages + articles sitemaps |
+| `/sitemap-pages.xml` | Homepage, pricing, privacy, terms |
+| `/sitemap-articles.xml` | All article hub, category, and article URLs |
 
 
 ## Environment Variables
