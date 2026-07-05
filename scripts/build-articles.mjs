@@ -111,6 +111,9 @@ function buildPagesSitemap() {
   const pages = [
     { loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'weekly' },
     { loc: `${SITE_URL}/pricing.html`, priority: '0.9', changefreq: 'monthly' },
+    { loc: `${SITE_URL}/how-it-works.html`, priority: '0.9', changefreq: 'monthly' },
+    { loc: `${SITE_URL}/about.html`, priority: '0.8', changefreq: 'monthly' },
+    { loc: `${SITE_URL}/contact.html`, priority: '0.8', changefreq: 'monthly' },
     { loc: `${SITE_URL}/privacy-policy.html`, priority: '0.4', changefreq: 'yearly' },
     { loc: `${SITE_URL}/terms-of-use.html`, priority: '0.4', changefreq: 'yearly' },
   ];

@@ -92,6 +92,9 @@ export default defineConfig(({ mode }) => {
         input: {
           main: resolve(__dirname, 'index.html'),
           pricing: resolve(__dirname, 'pricing.html'),
+          howItWorks: resolve(__dirname, 'how-it-works.html'),
+          about: resolve(__dirname, 'about.html'),
+          contact: resolve(__dirname, 'contact.html'),
         },
       },
     },
@@ -107,6 +110,7 @@ export default defineConfig(({ mode }) => {
       __SUPPORT_PHONE__: JSON.stringify(env.VITE_SUPPORT_PHONE ?? ''),
       __SITE_URL__: JSON.stringify(env.VITE_SITE_URL ?? 'https://waymate.pk'),
       __DEMO_VIDEO_ID__: JSON.stringify(env.VITE_DEMO_VIDEO_ID ?? 'mhZM_GSgdFU'),
+      __API_BASE_URL__: JSON.stringify(env.VITE_API_BASE_URL ?? 'http://localhost:4000'),
     },
   };
 });

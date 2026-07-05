@@ -5,6 +5,7 @@ const PLAY_STORE_URL = __PLAY_STORE_URL__;
 const CONTACT_EMAIL = __CONTACT_EMAIL__;
 const SUPPORT_PHONE = __SUPPORT_PHONE__;
 const DEMO_VIDEO_ID = __DEMO_VIDEO_ID__;
+const API_BASE_URL = __API_BASE_URL__;
 
 function wireStoreLinks() {
   document.querySelectorAll('[data-store="apple"]').forEach((el) => {
@@ -15,17 +16,24 @@ function wireStoreLinks() {
   });
 }
 
-function wireContact() {
-  const emailEl = document.getElementById('footer-email');
-  const phoneEl = document.getElementById('footer-phone');
-  if (emailEl && CONTACT_EMAIL) {
-    emailEl.href = `mailto:${CONTACT_EMAIL}`;
-    emailEl.textContent = CONTACT_EMAIL;
-  }
-  if (phoneEl && SUPPORT_PHONE) {
-    phoneEl.href = `tel:${SUPPORT_PHONE.replace(/\s/g, '')}`;
+function wireSupportDetails(phoneEl, emailEl, { onlyIfEmpty = false } = {}) {
+  if (phoneEl && SUPPORT_PHONE && (!onlyIfEmpty || !phoneEl.textContent?.trim())) {
     phoneEl.textContent = SUPPORT_PHONE;
+    phoneEl.href = `tel:${SUPPORT_PHONE.replace(/\s/g, '')}`;
   }
+  if (emailEl && CONTACT_EMAIL && (!onlyIfEmpty || !emailEl.textContent?.trim())) {
+    emailEl.textContent = CONTACT_EMAIL;
+    emailEl.href = `mailto:${CONTACT_EMAIL}`;
+  }
+}
+
+function wireContact() {
+  wireSupportDetails(document.getElementById('footer-phone'), document.getElementById('footer-email'));
+  wireSupportDetails(
+    document.getElementById('support-phone-display'),
+    document.getElementById('support-email-display'),
+    { onlyIfEmpty: true }
+  );
 }
 
 function initDemoVideo() {
@@ -141,6 +149,107 @@ function initLegalRedirects() {
   maybeRedirect();
 }
 
+async function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const successEl = document.getElementById('contact-success');
+  const errorEl = document.getElementById('contact-error');
+  const errorMsgEl = document.getElementById('contact-error-message');
+  const ticketRefEl = document.getElementById('contact-ticket-ref');
+  const phoneDisplay = document.getElementById('support-phone-display');
+  const emailDisplay = document.getElementById('support-email-display');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  if (API_BASE_URL) {
+    try {
+      const res = await fetch(`${API_BASE_URL}/support/web/config`);
+      if (res.ok) {
+        const config = await res.json();
+        if (phoneDisplay && config.supportPhone) {
+          phoneDisplay.textContent = config.supportPhone;
+          phoneDisplay.href = `tel:${String(config.supportPhone).replace(/\s/g, '')}`;
+        }
+        if (emailDisplay && config.supportEmail) {
+          emailDisplay.textContent = config.supportEmail;
+          emailDisplay.href = `mailto:${config.supportEmail}`;
+        }
+      }
+    } catch {
+      /* fall back to env defaults below */
+    }
+  }
+
+  if (phoneDisplay && SUPPORT_PHONE && !phoneDisplay.textContent?.trim()) {
+    phoneDisplay.textContent = SUPPORT_PHONE;
+    phoneDisplay.href = `tel:${SUPPORT_PHONE.replace(/\s/g, '')}`;
+  }
+  if (emailDisplay && CONTACT_EMAIL && !emailDisplay.textContent?.trim()) {
+    emailDisplay.textContent = CONTACT_EMAIL;
+    emailDisplay.href = `mailto:${CONTACT_EMAIL}`;
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    errorEl?.classList.add('hidden');
+    successEl?.classList.add('hidden');
+
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get('name') ?? '').trim(),
+      email: String(formData.get('email') ?? '').trim(),
+      phone: String(formData.get('phone') ?? '').trim() || undefined,
+      subject: String(formData.get('subject') ?? '').trim() || undefined,
+      category: String(formData.get('category') ?? 'general'),
+      message: String(formData.get('message') ?? '').trim(),
+    };
+
+    if (!payload.name || !payload.email || !payload.message) {
+      if (errorMsgEl) errorMsgEl.textContent = 'Please fill in your name, email, and message.';
+      errorEl?.classList.remove('hidden');
+      return;
+    }
+
+    if (!API_BASE_URL) {
+      if (errorMsgEl) {
+        errorMsgEl.textContent = 'Support is temporarily unavailable. Please email us directly.';
+      }
+      errorEl?.classList.remove('hidden');
+      return;
+    }
+
+    submitBtn?.setAttribute('disabled', 'true');
+    const originalLabel = submitBtn?.textContent;
+    if (submitBtn) submitBtn.textContent = 'Submitting…';
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/support/web-tickets`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.message || data.error || 'Could not submit your ticket. Please try again.');
+      }
+
+      if (ticketRefEl) ticketRefEl.textContent = data.ticket?.ticketRef ?? '';
+      successEl?.classList.remove('hidden');
+      form.reset();
+      successEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } catch (err) {
+      if (errorMsgEl) {
+        errorMsgEl.textContent = err instanceof Error ? err.message : 'Could not submit your ticket.';
+      }
+      errorEl?.classList.remove('hidden');
+    } finally {
+      submitBtn?.removeAttribute('disabled');
+      if (submitBtn && originalLabel) submitBtn.textContent = originalLabel;
+    }
+  });
+}
+
 document.getElementById('year').textContent = String(new Date().getFullYear());
 
 wireStoreLinks();
@@ -150,5 +259,6 @@ initScrollHeader();
 initNav();
 initTabs();
 initLegalRedirects();
+initContactForm();
 
 window.switchTab = switchTab;

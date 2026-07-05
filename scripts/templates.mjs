@@ -137,8 +137,10 @@ function siteHeader({ downloadHref = '/#download' } = {}) {
 
         <div class="hidden md:flex items-center space-x-8">
           <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#features">Features</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#how-it-works">How It Works</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/how-it-works.html">How It Works</a>
           <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/pricing.html">Pricing</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/about.html">About</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/contact.html">Contact</a>
           <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#cities">Cities</a>
           <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/articles/">Articles</a>
         </div>
@@ -166,8 +168,10 @@ function siteHeader({ downloadHref = '/#download' } = {}) {
     <div id="nav-mobile-panel" class="nav-mobile-panel md:hidden">
       <div class="flex flex-col gap-4 font-bold">
         <a class="text-on-surface-variant" href="/#features">Features</a>
-        <a class="text-on-surface-variant" href="/#how-it-works">How It Works</a>
+        <a class="text-on-surface-variant" href="/how-it-works.html">How It Works</a>
         <a class="text-on-surface-variant" href="/pricing.html">Pricing</a>
+        <a class="text-on-surface-variant" href="/about.html">About</a>
+        <a class="text-on-surface-variant" href="/contact.html">Contact</a>
         <a class="text-on-surface-variant" href="/#cities">Cities</a>
         <a class="text-on-surface-variant" href="/articles/">Articles</a>
         <a class="art-nav-panel-download text-primary-container" href="${escapeHtml(downloadHref)}">Get the App</a>
