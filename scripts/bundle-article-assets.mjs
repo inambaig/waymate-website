@@ -19,6 +19,8 @@ export async function bundleArticleAssets() {
     define: {
       __APP_STORE_URL__: JSON.stringify(env.VITE_APP_STORE_URL ?? ''),
       __PLAY_STORE_URL__: JSON.stringify(env.VITE_PLAY_STORE_URL ?? ''),
+      __CONTACT_EMAIL__: JSON.stringify(env.VITE_CONTACT_EMAIL ?? ''),
+      __SUPPORT_PHONE__: JSON.stringify(env.VITE_SUPPORT_PHONE ?? ''),
     },
     build: {
       emptyOutDir: true,

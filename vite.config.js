@@ -4,6 +4,7 @@ import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildArticles } from './scripts/build-articles.mjs';
 import { bundleArticleAssets } from './scripts/bundle-article-assets.mjs';
+import { injectPartials } from './scripts/partials.mjs';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
@@ -36,6 +37,29 @@ function articlesRoutingMiddleware(req, _res, next) {
   next();
 }
 
+function htmlPartialsPlugin() {
+  const partialsDir = resolve(__dirname, 'partials');
+
+  return {
+    name: 'waymate-html-partials',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html) {
+        return injectPartials(html);
+      },
+    },
+    configureServer(server) {
+      server.watcher.add(partialsDir);
+    },
+    handleHotUpdate({ file, server }) {
+      if (file.startsWith(partialsDir)) {
+        server.ws.send({ type: 'full-reload' });
+        return [];
+      }
+    },
+  };
+}
+
 function articlesPlugin() {
   let rebuildQueue = Promise.resolve();
   let debounceTimer = null;
@@ -63,6 +87,7 @@ function articlesPlugin() {
           resolve(__dirname, 'src/articles.css'),
           resolve(__dirname, 'scripts/templates.mjs'),
           resolve(__dirname, 'scripts/build-articles.mjs'),
+          resolve(__dirname, 'partials'),
         ];
         for (const p of watchPaths) {
           server.watcher.add(p);
@@ -73,7 +98,8 @@ function articlesPlugin() {
             file.endsWith('articles.js') ||
             file.endsWith('articles.css') ||
             file.includes('scripts/templates.mjs') ||
-            file.includes('scripts/build-articles.mjs')
+            file.includes('scripts/build-articles.mjs') ||
+            file.includes('/partials/')
           ) {
             scheduleRebuild();
           }
@@ -86,7 +112,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    plugins: [tailwindcss(), articlesPlugin()],
+    plugins: [tailwindcss(), htmlPartialsPlugin(), articlesPlugin()],
     build: {
       rollupOptions: {
         input: {

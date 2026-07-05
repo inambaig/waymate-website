@@ -1,7 +1,10 @@
 import './articles.css';
+import { initActiveNav, initSiteFooter } from './site-chrome.js';
 
 const APP_STORE_URL = __APP_STORE_URL__;
 const PLAY_STORE_URL = __PLAY_STORE_URL__;
+const CONTACT_EMAIL = __CONTACT_EMAIL__;
+const SUPPORT_PHONE = __SUPPORT_PHONE__;
 
 document.documentElement.classList.add('art-enhanced');
 
@@ -121,5 +124,7 @@ function initCardHoverRipple() {
 initStoreButtons();
 initScrollHeader();
 initNav();
+initActiveNav();
+initSiteFooter({ contactEmail: CONTACT_EMAIL, supportPhone: SUPPORT_PHONE });
 initRevealAnimations();
 initCardHoverRipple();

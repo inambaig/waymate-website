@@ -1,4 +1,5 @@
 import './input.css';
+import { initActiveNav, initSiteFooter } from './site-chrome.js';
 
 const APP_STORE_URL = __APP_STORE_URL__;
 const PLAY_STORE_URL = __PLAY_STORE_URL__;
@@ -250,10 +251,11 @@ async function initContactForm() {
   });
 }
 
-document.getElementById('year').textContent = String(new Date().getFullYear());
+initSiteFooter({ contactEmail: CONTACT_EMAIL, supportPhone: SUPPORT_PHONE });
 
 wireStoreLinks();
 wireContact();
+initActiveNav();
 initDemoVideo();
 initScrollHeader();
 initNav();

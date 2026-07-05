@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@source "../partials/**/*.html";
+
 @theme {
   --font-quicksand: "Quicksand", system-ui, sans-serif;
 

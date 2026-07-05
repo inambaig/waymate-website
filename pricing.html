@@ -25,62 +25,8 @@
     <link rel="stylesheet" href="/src/input.css" />
   </head>
   <body class="site-page bg-background text-on-surface overflow-x-hidden" id="top">
-    <div id="site-header" class="site-header">
-      <nav
-        id="site-nav"
-        class="bg-white/80 backdrop-blur-xl rounded-full shadow-plump-neutral border-2 border-white"
-      >
-        <div class="flex justify-between items-center w-full px-4 md:px-6 py-3 max-w-max-width mx-auto">
-          <a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary-container text-2xl md:text-3xl">child_care</span>
-            WAYMATE
-          </a>
+    <!-- @include header.html -->
 
-          <div class="hidden md:flex items-center space-x-8">
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#features">Features</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/how-it-works.html">How It Works</a>
-            <a class="text-primary font-bold" href="/pricing.html" aria-current="page">Pricing</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/about.html">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/contact.html">Contact</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#cities">Cities</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/articles/">Articles</a>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <a
-              href="/#download"
-              class="bg-primary-container text-on-primary font-black px-4 md:px-6 py-2 md:py-2.5 rounded-full border-2 border-black/10 cartoon-btn shadow-plump text-sm md:text-base"
-            >
-              <span class="md:hidden">Get the App</span>
-              <span class="hidden md:inline">Join the Fun</span>
-            </a>
-            <button
-              id="nav-toggle"
-              class="md:hidden flex flex-col gap-[5px] p-2 ml-1"
-              aria-label="Toggle menu"
-              aria-expanded="false"
-            >
-              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      <div id="nav-mobile-panel" class="nav-mobile-panel md:hidden">
-        <div class="flex flex-col gap-4 font-bold">
-          <a class="text-on-surface-variant" href="/#features">Features</a>
-          <a class="text-on-surface-variant" href="/how-it-works.html">How It Works</a>
-          <a class="text-primary" href="/pricing.html" aria-current="page">Pricing</a>
-          <a class="text-on-surface-variant" href="/about.html">About</a>
-          <a class="text-on-surface-variant" href="/contact.html">Contact</a>
-          <a class="text-on-surface-variant" href="/#cities">Cities</a>
-          <a class="text-on-surface-variant" href="/articles/">Articles</a>
-          <a class="text-on-surface-variant" href="/#download">Download</a>
-        </div>
-      </div>
-    </div>
 
     <main id="main-content">
       <header class="text-center bg-site-top-tint rounded-b-[3rem] md:rounded-b-[4rem] pt-32 md:pt-36 pb-10 md:pb-12">
@@ -240,88 +186,8 @@
         </div>
       </section>
     </main>
+    <!-- @include footer.html -->
 
-    <footer class="bg-on-surface text-white pt-16 md:pt-24 pb-10 md:pb-12 rounded-t-[3rem] md:rounded-t-[5rem] mt-8 md:mt-12" id="site-footer">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12 md:mb-16">
-        <div>
-          <div class="text-2xl md:text-3xl font-black text-primary-container mb-6 md:mb-8 flex items-center gap-2">
-            <span class="material-symbols-outlined text-3xl md:text-4xl">auto_awesome</span>
-            WAYMATE
-          </div>
-          <p class="text-surface-container-high font-bold opacity-80 pr-4">
-            The friendliest way to share your daily route across Pakistan. Let's commute better together!
-          </p>
-        </div>
-        <div>
-          <h6 class="text-lg md:text-xl font-black mb-6 md:mb-8 text-primary-fixed">Explore</h6>
-          <ul class="space-y-3 md:space-y-4 font-bold">
-            <li><a class="hover:text-primary-container transition-colors" href="/#features">Cool Features</a></li>
-            <li><a class="hover:text-primary-container transition-colors" href="/#how-it-works">How it Works</a></li>
-            <li><a class="hover:text-primary-container transition-colors" href="/pricing.html">Price Plans</a></li>
-            <li><a class="hover:text-primary-container transition-colors" href="/#cities">Our Cities</a></li>
-            <li><a class="hover:text-primary-container transition-colors" href="/articles/">Articles</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6 class="text-lg md:text-xl font-black mb-6 md:mb-8 text-primary-fixed">Boring Stuff</h6>
-          <ul class="space-y-3 md:space-y-4 font-bold">
-            <li><a class="hover:text-primary-container transition-colors" href="/terms-of-use.html">Terms of Use</a></li>
-            <li><a class="hover:text-primary-container transition-colors" href="/privacy-policy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6 class="text-lg md:text-xl font-black mb-6 md:mb-8 text-primary-fixed">Say Hello!</h6>
-          <ul class="space-y-3 md:space-y-4 font-bold">
-            <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary-container">mail</span>
-              <a href="#" id="footer-email">hello@waymate.pk</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary-container">phone_in_talk</span>
-              <a href="#" id="footer-phone">+92-300-0000000</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="hidden md:flex justify-center gap-4 px-margin-desktop max-w-max-width mx-auto pb-8">
-        <a href="#" class="store-btn store-btn-footer cartoon-btn" data-store="apple" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined text-2xl">phone_iphone</span>
-          <span class="text-left">
-            <span class="block text-[10px] text-white/70 font-bold uppercase tracking-widest">Download on the</span>
-            <span class="block text-base font-black leading-tight">App Store</span>
-          </span>
-        </a>
-        <a href="#" class="store-btn store-btn-footer cartoon-btn" data-store="google" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined text-2xl">shop</span>
-          <span class="text-left">
-            <span class="block text-[10px] text-white/70 font-bold uppercase tracking-widest">Get it on</span>
-            <span class="block text-base font-black leading-tight">Google Play</span>
-          </span>
-        </a>
-      </div>
-
-      <div class="md:hidden px-margin-mobile max-w-max-width mx-auto pb-8 flex flex-col gap-3">
-        <a href="#" class="store-btn store-btn-footer cartoon-btn justify-center w-full" data-store="apple" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined text-3xl">phone_iphone</span>
-          <span class="text-left">
-            <span class="block text-[10px] text-white/70 font-bold uppercase tracking-widest">Download on the</span>
-            <span class="block text-lg font-black leading-tight">App Store</span>
-          </span>
-        </a>
-        <a href="#" class="store-btn store-btn-footer cartoon-btn justify-center w-full" data-store="google" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined text-3xl">shop</span>
-          <span class="text-left">
-            <span class="block text-[10px] text-white/70 font-bold uppercase tracking-widest">Get it on</span>
-            <span class="block text-lg font-black leading-tight">Google Play</span>
-          </span>
-        </a>
-      </div>
-
-      <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto pt-8 border-t border-white/10 text-center">
-        <p class="text-sm font-bold opacity-60">© <span id="year"></span> Waymate. Made with 🧡 for Pakistan's commuters.</p>
-      </div>
-    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>

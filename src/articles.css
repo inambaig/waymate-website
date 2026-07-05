@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@source "../partials/**/*.html";
+
 @theme {
   --font-quicksand: "Quicksand", system-ui, sans-serif;
   --font-serif: "Source Serif 4", Georgia, serif;
@@ -23,6 +25,7 @@
   --color-background: #f4fafd;
   --color-surface: #f4fafd;
   --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e2e9ec;
   --color-surface-container-low: #eef5f7;
   --color-surface-container: #e8eff1;
   --color-outline-variant: #dcc2ae;
@@ -322,6 +325,31 @@ html[data-store-mode='apple'] [data-store='google'] {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
+}
+
+.store-btn-footer {
+  padding: 12px 20px;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1b1c1c;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 1rem;
+  border: 2px solid #000;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.store-btn:hover {
+  transform: scale(1.05);
+}
+
+.store-btn:active {
+  transform: scale(0.98);
 }
 
 /* ── Layout ── */

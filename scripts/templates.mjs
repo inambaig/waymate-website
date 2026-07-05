@@ -1,3 +1,5 @@
+import { readPartial } from './partials.mjs';
+
 const ACCENT_MAP = {
   primary: {
     badge: 'art-badge--primary',
@@ -121,97 +123,15 @@ function storeButtonsMarkup({ variant = 'nav' } = {}) {
   return `<div class="art-store-group art-store-group--${variant}" data-store-group>${apple}${google}</div>`;
 }
 
-function siteHeader({ downloadHref = '/#download' } = {}) {
+function pageOpen() {
   return `<body class="art-body bg-background text-on-surface overflow-x-hidden">
   <a class="art-skip-link" href="#main-content">Skip to content</a>
-  <div id="site-header" class="site-header">
-    <nav
-      id="site-nav"
-      class="bg-white/80 backdrop-blur-xl rounded-full shadow-plump-neutral border-2 border-white"
-    >
-      <div class="flex justify-between items-center w-full px-4 md:px-6 py-3 max-w-max-width mx-auto">
-        <a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary-container text-2xl md:text-3xl">child_care</span>
-          WAYMATE
-        </a>
-
-        <div class="hidden md:flex items-center space-x-8">
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#features">Features</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/how-it-works.html">How It Works</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/pricing.html">Pricing</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/about.html">About</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/contact.html">Contact</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/#cities">Cities</a>
-          <a class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/articles/">Articles</a>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <a
-            href="${escapeHtml(downloadHref)}"
-            class="art-nav-get-app bg-primary-container text-on-primary font-black px-4 py-2 rounded-full border-2 border-black/10 cartoon-btn shadow-plump text-sm"
-          >Get the App</a>
-          ${storeButtonsMarkup({ variant: 'nav' })}
-          <button
-            id="nav-toggle"
-            class="md:hidden flex flex-col gap-[5px] p-2 ml-1"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-            <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-            <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <div id="nav-mobile-panel" class="nav-mobile-panel md:hidden">
-      <div class="flex flex-col gap-4 font-bold">
-        <a class="text-on-surface-variant" href="/#features">Features</a>
-        <a class="text-on-surface-variant" href="/how-it-works.html">How It Works</a>
-        <a class="text-on-surface-variant" href="/pricing.html">Pricing</a>
-        <a class="text-on-surface-variant" href="/about.html">About</a>
-        <a class="text-on-surface-variant" href="/contact.html">Contact</a>
-        <a class="text-on-surface-variant" href="/#cities">Cities</a>
-        <a class="text-on-surface-variant" href="/articles/">Articles</a>
-        <a class="art-nav-panel-download text-primary-container" href="${escapeHtml(downloadHref)}">Get the App</a>
-        ${storeButtonsMarkup({ variant: 'panel' })}
-      </div>
-    </div>
-  </div>`;
+  ${readPartial('header.html')}`;
 }
 
-function siteFooter() {
-  const year = new Date().getFullYear();
-  return `<footer class="art-footer">
-    <div class="art-footer-grid">
-      <div>
-        <div class="art-footer-brand">
-          <span class="material-symbols-outlined">auto_awesome</span>
-          WAYMATE
-        </div>
-        <p class="art-footer-copy">The friendliest way to share your daily route across Pakistan.</p>
-      </div>
-      <div>
-        <h6 class="art-footer-heading">Explore</h6>
-        <ul class="art-footer-list">
-          <li><a href="/#features">Features</a></li>
-          <li><a href="/articles/">Articles</a></li>
-          <li><a href="/#download">Download</a></li>
-        </ul>
-      </div>
-      <div>
-        <h6 class="art-footer-heading">Legal</h6>
-        <ul class="art-footer-list">
-          <li><a href="/terms-of-use.html">Terms of Use</a></li>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="art-footer-bottom">
-      <p>© ${year} Waymate. Made with care for Pakistan's commuters.</p>
-    </div>
-  </footer>
+function pageClose() {
+  return `${readPartial('download-cta.html')}
+  ${readPartial('footer.html')}
   <script type="module" src="/article-assets/articles.js"></script>
 </body>
 </html>`;
@@ -344,7 +264,7 @@ export function renderArticlesIndex({ siteUrl, categories, articlesByCategory })
     canonical,
     articleMeta: { jsonLd },
   })}
-${siteHeader()}
+${pageOpen()}
 <main id="main-content" class="art-main">
   <header class="art-hero art-hero--index art-reveal">
     <div class="art-hero-blob art-hero-blob--1"></div>
@@ -357,7 +277,7 @@ ${siteHeader()}
   </header>
   <div class="art-container">${sections}</div>
 </main>
-${siteFooter()}`;
+${pageClose()}`;
 }
 
 export function renderCategoryPage({
@@ -396,7 +316,7 @@ export function renderCategoryPage({
     canonical,
     articleMeta: { jsonLd },
   })}
-${siteHeader()}
+${pageOpen()}
 <main id="main-content" class="art-main">
   <header class="art-hero art-hero--category art-reveal">
     <div class="art-hero-blob art-hero-blob--1"></div>
@@ -421,7 +341,7 @@ ${siteHeader()}
     ${pagination({ category, currentPage, totalPages, basePath })}
   </div>
 </main>
-${siteFooter()}`;
+${pageClose()}`;
 }
 
 function renderFaqSection(faq) {
@@ -511,7 +431,7 @@ export function renderArticlePage({ siteUrl, category, article, related, htmlBod
       faqJsonLd,
     },
   })}
-${siteHeader({ downloadHref: '#article-download' })}
+${pageOpen()}
 <main id="main-content" class="art-main">
   <article class="art-article">
     <header class="art-article-header art-reveal">
@@ -544,13 +464,8 @@ ${siteHeader({ downloadHref: '#article-download' })}
         <h2>More in ${escapeHtml(category.name)}</h2>
         <div class="art-card-grid art-card-grid--related">${relatedCards}</div>
       </aside>
-      <div class="art-article-cta art-reveal" id="article-download" style="--reveal-delay:130ms">
-        <h2>Ready to carpool?</h2>
-        <p>Download Waymate and turn your daily commute into a shared ride.</p>
-        ${storeButtonsMarkup({ variant: 'cta' })}
-      </div>
     </div>
   </article>
 </main>
-${siteFooter()}`;
+${pageClose()}`;
 }

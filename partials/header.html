@@ -1,0 +1,54 @@
+    <div id="site-header" class="site-header">
+      <nav
+        id="site-nav"
+        class="bg-white/80 backdrop-blur-xl rounded-full shadow-plump-neutral border-2 border-white"
+      >
+        <div class="flex justify-between items-center w-full px-4 md:px-6 py-3 max-w-max-width mx-auto">
+          <a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary-container text-2xl md:text-3xl">child_care</span>
+            WAYMATE
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a data-nav="home" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/">Home</a>
+            <a data-nav="how-it-works" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/how-it-works.html">How It Works</a>
+            <a data-nav="pricing" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/pricing.html">Pricing</a>
+            <a data-nav="articles" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/articles/">Articles</a>
+            <a data-nav="about" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/about.html">About</a>
+            <a data-nav="contact" class="text-on-surface-variant hover:text-primary transition-colors font-bold" href="/contact.html">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <a
+              href="/#download"
+              class="bg-primary-container text-on-primary font-black px-4 md:px-6 py-2 md:py-2.5 rounded-full border-2 border-black/10 cartoon-btn shadow-plump text-sm md:text-base"
+            >
+              <span class="md:hidden">Get the App</span>
+              <span class="hidden md:inline">Join the Fun</span>
+            </a>
+            <button
+              id="nav-toggle"
+              class="md:hidden flex flex-col gap-[5px] p-2 ml-1"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+            >
+              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
+              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
+              <span class="block w-5 h-0.5 bg-on-surface rounded"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div id="nav-mobile-panel" class="nav-mobile-panel md:hidden">
+        <div class="flex flex-col gap-4 font-bold">
+          <a data-nav="home" class="text-on-surface-variant" href="/">Home</a>
+          <a data-nav="how-it-works" class="text-on-surface-variant" href="/how-it-works.html">How It Works</a>
+          <a data-nav="pricing" class="text-on-surface-variant" href="/pricing.html">Pricing</a>
+          <a data-nav="articles" class="text-on-surface-variant" href="/articles/">Articles</a>
+          <a data-nav="about" class="text-on-surface-variant" href="/about.html">About</a>
+          <a data-nav="contact" class="text-on-surface-variant" href="/contact.html">Contact</a>
+          <a class="text-on-surface-variant" href="/#download">Download</a>
+        </div>
+      </div>
+    </div>
